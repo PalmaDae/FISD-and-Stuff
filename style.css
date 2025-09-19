@@ -22,3 +22,11 @@
 .history {
     color:crimson ;
 }
+
+.background {
+    background-image: url('https://image.milimaj.com/i/milliyet/75/0x0/65424e4486b2473b50cf1d79.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
