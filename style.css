@@ -1,7 +1,7 @@
-p {
+/* p {
     color: chocolate;
     text-align: center;
-}
+} */
 
 #first_id {
     color: brown;
@@ -13,4 +13,12 @@ p {
 
 #center_h1 {
   text-align: center;
+}
+
+.sources {
+    text-align: center;
+}
+
+.history {
+    color:crimson ;
 }
