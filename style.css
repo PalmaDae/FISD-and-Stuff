@@ -10,3 +10,7 @@ p {
 .picture_tarkos {
     border: 2px solid blueviolet;
 }
+
+#center_h1 {
+  text-align: center;
+}
