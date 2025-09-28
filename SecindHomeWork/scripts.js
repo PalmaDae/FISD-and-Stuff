@@ -95,9 +95,31 @@ function picturesCarousel() {
 
 }
 
-function feedBack() {
-    let email = document.getElementById("email");
-    let message = document.getElementById("message");
+function feedBack(event) {
+    event.preventDefault();
+
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let feedBackResult = document.getElementById("feedback");
+
+    let mailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!mailPattern.test(email)) {
+        feedBackResult.textContent = "Пожалуйста введите корректный e-mail адрес";
+        feedBackResult.style.color = "red";
+        return;
+    }
+
+    if (message === "") {
+        feedBackResult.textContent = "Пожалуйста напишите ваше сообщение 0_0";
+        feedBackResult.style.color = "red";
+        return;
+    }
+
+    feedBackResult.textContent = "Спасибо, ваше сообщение было отправлено(На самом деле нам без разницы на ваше мнение)"
+    feedBackResult.style.color = "green";
+
+    document.getElementById("feedbackForm").reset();
 }
 
 function beatifulInfo() {
