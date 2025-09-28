@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", timer);
 
 document.addEventListener("DOMContentLoaded", picturesCarousel);
 
+document.addEventListener("DOMContentLoaded", denu);
+
 function randomFact() {
     let facts = [
         "Пиво – один из старейших алкогольных напитков в мире.",
@@ -177,10 +179,6 @@ function feedBack(event) {
     document.getElementById("feedbackForm").reset();
 }
 
-function beatifulInfo() {
-
-}
-
 function timer() {
     let festivalDate = new Date("2025-10-01T12:00:00");
     let timerInPage = document.getElementById("festivalTimer");
@@ -211,4 +209,15 @@ function timer() {
 
 function trueSideOfPage() {
 
+}
+
+function beatifulInfo() {
+    let menuButton = document.getElementById("menuButton");
+    let menuList = document.getElementById("menuButton");
+
+    menuButton.addEventListener("click", (e) => {
+        if (!menuButton.contains(e.target) && !menuList.contains(e.target)) {
+            menuList.classList.remove("show");
+        }
+    });
 }
