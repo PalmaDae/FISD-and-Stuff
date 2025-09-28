@@ -96,7 +96,8 @@ function picturesCarousel() {
 }
 
 function feedBack() {
-
+    let email = document.getElementById("email");
+    let message = document.getElementById("message");
 }
 
 function beatifulInfo() {
