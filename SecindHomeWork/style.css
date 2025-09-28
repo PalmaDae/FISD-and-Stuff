@@ -27,7 +27,18 @@
     color:crimson ;
 }
 
-.background {
+#carousel {
+    text-align: center;
+}
+
+#carousel_second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* .background {
     background-image: url('https://image.milimaj.com/i/milliyet/75/0x0/65424e4486b2473b50cf1d79.jpg');
     background-size: cover;
     background-position: center;
@@ -35,7 +46,7 @@
     height: 100vh;
     width: 100%;
     
-}
+} */
 
 .radiant {
     background-color: #fff;

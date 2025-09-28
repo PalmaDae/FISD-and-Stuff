@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", timer);
 
+document.addEventListener("DOMContentLoaded", picturesCarousel);
+
 function randomFact() {
     let facts = [
         "Пиво – один из старейших алкогольных напитков в мире.",
@@ -93,6 +95,58 @@ window.addEventListener('load', () => {
 });
 
 function picturesCarousel() {
+    let pics = [
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6685a14b20f44851592cac9f_6685a9f8db69b121a667d567/scale_1200",
+            caption: "Первое пиво у мужчины"
+        },
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_6632152247c42e563308e291_66321a3fdc525b089c8729fd/scale_1200",
+            caption: "Лучшее пиво на свете"
+        },
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_665090c9f429d0796c1d9c60_6650928a2f539b1ddc369dbe/scale_1200",
+            caption: "Под доту покатит"
+        },
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65ed02ea46391233959a7cb0_65ef34b4d0da6a450caa4be9/scale_1200",
+            caption: "Проклятый напиток"
+        },
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_66583010e420d72646942a2e_6659fe6852837e61466f363a/scale_1200",
+            caption: "Лучшее пиво если у тебя нет аллергии на мёд("
+        },
+        {
+            src: "https://avatars.mds.yandex.net/i?id=f3e3647570749ce53580a1e10ceed06d_l-5669034-images-thumbs&n=13",
+            caption: "Ну покатит"
+        },
+        {
+            src: "https://avatars.dzeninfra.ru/get-zen_doc/9366213/pub_6499291b5a71a1676e7ec87c_649ba22b0d74bf7b022f763b/scale_1200",
+            caption: "0_0"
+        }
+    ];
+
+    let currentIndex = 0;
+
+    let img = document.getElementById("carouselImage");
+    let caption = document.getElementById("carouselCaption");
+
+    function showPic(index) {
+        img.src = pics[index].src;
+        caption.textContent = pics[index].caption
+    }
+
+    document.getElementById("next").addEventListener("click", function() {
+        currentIndex = (currentIndex + 1) % pics.length;
+        showPic(currentIndex);
+    });
+
+    document.getElementById("prev").addEventListener("click", function() {
+        currentIndex = (currentIndex - 1 + pics.length) % pics.length;
+        showPic(currentIndex);
+    });
+
+    showPic(currentIndex);
 
 }
 
