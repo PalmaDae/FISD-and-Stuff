@@ -7,6 +7,10 @@
     color: brown;
 }
 
+#beer_fact {
+    text-align: center;
+}
+
 .picture_tarkos {
     border: 2px solid blueviolet;
 }

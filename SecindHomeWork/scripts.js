@@ -1,4 +1,9 @@
 let block;
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("beer_fact").textContent = randomFact();
+}
+
+);
 
 function randomFact() {
     let facts = [
@@ -57,7 +62,9 @@ function randomFact() {
         "Крафтовое пиво помогает поддерживать местную экономику и малый бизнес."
     ];
 
-    return facts[facts.length - 1]
+    const randomIndex = Math.floor(Math.random() * facts.length);
+
+    return facts[randomIndex];
 }
 
 function changeTheme() {
