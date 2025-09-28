@@ -1,0 +1,34 @@
+/* p {
+    color: chocolate;
+    text-align: center;
+} */
+
+#first_id {
+    color: brown;
+}
+
+.picture_tarkos {
+    border: 2px solid blueviolet;
+}
+
+#center_h1 {
+  text-align: center;
+}
+
+.sources {
+    text-align: center;
+}
+
+.history {
+    color:crimson ;
+}
+
+.background {
+    background-image: url('https://image.milimaj.com/i/milliyet/75/0x0/65424e4486b2473b50cf1d79.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    
+}
