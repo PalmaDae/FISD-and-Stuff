@@ -2,8 +2,9 @@ let block;
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("beer_fact").textContent = randomFact();
 }
-
 );
+
+document.addEventListener("DOMContentLoaded", timer);
 
 function randomFact() {
     let facts = [
@@ -127,6 +128,30 @@ function beatifulInfo() {
 }
 
 function timer() {
+    let festivalDate = new Date("2025-10-01T12:00:00");
+    let timerInPage = document.getElementById("festivalTimer");
+
+    function updateTimer() {
+        let now = new Date();
+        let diff = festivalDate - now;
+
+        if (diff <= 0) {
+            timerInPage.textContent = "ФЕСТИВАЛЬ В САМОМ РАЗГАРЕ"
+            clearInterval(interval);
+            return;
+        }
+
+        let days = Math.floor(diff / (1000*60*60*24) )
+        let hours = Math.floor((diff / (1000*60*60)) % 24);
+        let minutes = Math.floor((diff / (1000*60)%60));
+        let secunds = Math.floor((diff / (1000)%60));
+
+        timerInPage.textContent = `${days} дней ${hours} часов ${minutes} минут ${secunds} секунд`;
+    }
+
+    updateTimer();
+
+    let interval = setInterval(updateTimer, 1000);
 
 }
 
