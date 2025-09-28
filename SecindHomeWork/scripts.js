@@ -9,6 +9,9 @@ function changeTheme() {
     if (block.classList == "radiant") {
         block.classList.remove("radiant");
         block.classList.add("dark");
+    } else {
+        block.classList.remove("dark");
+        block.classList.add("radiant");
     }
 }
 
