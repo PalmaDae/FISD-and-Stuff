@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", timer);
 
 document.addEventListener("DOMContentLoaded", picturesCarousel);
 
-document.addEventListener("DOMContentLoaded", denu);
+document.addEventListener("DOMContentLoaded", beatifulInfo);
 
 function randomFact() {
     let facts = [
@@ -213,7 +213,16 @@ function trueSideOfPage() {
 
 function beatifulInfo() {
     let menuButton = document.getElementById("menuButton");
-    let menuList = document.getElementById("menuButton");
+    let menuList = document.getElementById("menuList");
+
+    if (!menuButton || !menuList) return;
+
+    menuButton.addEventListener("click", (e) => {
+
+        e.preventDefault();
+        menuList.classList.toggle("show");
+
+    });
 
     menuButton.addEventListener("click", (e) => {
         if (!menuButton.contains(e.target) && !menuList.contains(e.target)) {

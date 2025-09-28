@@ -105,3 +105,42 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+#changeButton {
+    display: block;
+    padding: 10px 15px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0,3s, color 0.3s;
+    font-size: 14px;
+}
+
+#changeButton:hover {
+    background-color: #888;
+}
+
+.radiant #changeButton {
+    background-color: #ddd;
+    color: #000;
+}
+
+.dark #changeButton {
+    background-color: #444;
+    color: white;
+}
+
+.radiant #changeButton:hover {
+    background-color: ccc;
+}
+
+.dark #changeButton:hover {
+    background-color: #555;
+}
+
+.denu ul li button {
+    font-family: inherit;
+    font-size: 14px;
+}
