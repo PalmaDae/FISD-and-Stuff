@@ -11,10 +11,10 @@ public class JettyLauncher {
         context.setContextPath("/");
         server.setHandler(context);
 
-        context.addServlet(MaximServlet.class, "/hello");
+        context.addServlet(FirstServlet.class, "/first");
 
         server.start();
-        System.out.println("Server started at http://localhost:6969/hello");
+        System.out.println("Server started at http://localhost:6969/first");
         server.join();
     }
 }
