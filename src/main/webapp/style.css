@@ -1,0 +1,146 @@
+/* p {
+    color: chocolate;
+    text-align: center;
+} */
+
+#first_id {
+    color: brown;
+}
+
+#beer_fact {
+    text-align: center;
+}
+
+.picture_tarkos {
+    border: 2px solid blueviolet;
+}
+
+#center_h1 {
+  text-align: center;
+}
+
+.sources {
+    text-align: center;
+}
+
+.history {
+    color:crimson ;
+}
+
+#carousel {
+    text-align: center;
+}
+
+#carousel_second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* .background {
+    background-image: url('https://image.milimaj.com/i/milliyet/75/0x0/65424e4486b2473b50cf1d79.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    
+} */
+
+.radiant {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.denu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    background: #333;
+}
+
+.denu ul li {
+    position: relative;
+}
+
+.denu ul li a {
+    display: block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
+}
+
+.denu ul li a:hover {
+    background: #555;
+}
+
+.downContent {
+    display: none;
+    position: absolute;
+    background: #444;
+    margin-top: 5px;
+    min-width: 200px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.downContent li a {
+    padding: 10px;
+    display: block;
+}
+
+.downContent.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#changeButton {
+    display: block;
+    padding: 10px 15px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0,3s, color 0.3s;
+    font-size: 14px;
+}
+
+#changeButton:hover {
+    background-color: #888;
+}
+
+.radiant #changeButton {
+    background-color: #ddd;
+    color: #000;
+}
+
+.dark #changeButton {
+    background-color: #444;
+    color: white;
+}
+
+.radiant #changeButton:hover {
+    background-color: ccc;
+}
+
+.dark #changeButton:hover {
+    background-color: #555;
+}
+
+.denu ul li button {
+    font-family: inherit;
+    font-size: 14px;
+}
