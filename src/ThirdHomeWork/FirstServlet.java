@@ -16,6 +16,8 @@ public class FirstServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+
+
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("someone.html");
 
         BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
