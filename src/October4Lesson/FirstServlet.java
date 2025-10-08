@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.*;
 
@@ -24,6 +25,21 @@ public class FirstServlet extends HttpServlet {
         while ((line = reader.readLine()) != null) {
             out.println(line);
         }
+
+
+
+        HttpSession session = req.getSession();
+
+        Integer visitCnt = (Integer) session.getAttribute("visitCount");
+
+        if (visitCnt == null) {
+            visitCnt = 1;
+        }else {
+            visitCnt++;
+        }
+
+        session.setAttribute("visitCount", visitCnt);
+        out.println("<p>Количество запросов из этой сессии: " + session.getAttribute("visitCount") + "</p>");
     }
 
     @Override
