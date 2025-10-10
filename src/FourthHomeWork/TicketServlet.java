@@ -1,4 +1,4 @@
-package October4Lesson;
+package FourthHomeWork;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.*;
 
 
-@WebServlet("/fifth")
-public class FifthServlet extends HttpServlet {
+@WebServlet("/tickets")
+public class TicketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
