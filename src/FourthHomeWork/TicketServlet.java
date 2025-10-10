@@ -5,8 +5,11 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @WebServlet("/tickets")
@@ -29,16 +32,25 @@ public class TicketServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-second.html");
+        HttpSession session = req.getSession();
 
-        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
+        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
 
-        PrintWriter out = resp.getWriter();
-
-        String line;
-
-        while ((line = reader.readLine()) != null) {
-            out.println(line);
+        if (cart == null) {
+            cart = new ArrayList<>();
+            session.setAttribute("cart",cart);
         }
+
+        String name = req.getParameter("productName");
+        int price = Integer.parseInt(req.getParameter("productPrice"));
+        String description = req.getParameter("productDescription");
+
+        Ticket ticket = new Ticket(name,price,description);
+
+        cart.add(ticket);
+
+        session.setAttribute("cart",cart);
+
+        resp.sendRedirect("/cart");
     }
 }

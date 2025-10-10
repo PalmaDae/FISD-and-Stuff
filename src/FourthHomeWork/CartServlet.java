@@ -35,24 +35,28 @@ public class CartServlet extends HttpServlet {
         }
 
         while ((line = reader.readLine()) != null) {
+            if (line.contains("<div id=\"cartContent\">")) {
+                out.println(line);
+
+                if (cart.isEmpty()) {
+                    out.println("<p>Корзина пустует</p>");
+                } else {
+                    out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
+                    out.println("<tr><th>Фестиваль</th><th>Описание</th><th>Цена</th></tr>");
+
+                    for (Ticket ticket : cart) {
+                        out.println("<tr>");
+                        out.println("<td>" + ticket.getName() + "</td>");
+                        out.println("<td>" + ticket.getDescription() + "</td>");
+                        out.println("<td>" + ticket.getPrice() + "</td>");
+                        out.println("</tr>");
+                    }
+                    out.println("</table>");
+                }
+            }
             out.println(line);
         }
 
-        if (cart.isEmpty() || cart == null) {
-            out.println("<p>Корзина пустует</p>");
-        } else {
-            out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
-            out.println("<tr><th>Фестиваль</th><th>Описание</th><th>Цена</th></tr>");
-
-            for (Ticket ticket : cart) {
-                out.println("<tr>");
-                out.println("<td>" + ticket.getName() + "</td>");
-                out.println("<td>" + ticket.getDescription() + "</td>");
-                out.println("<td>" + ticket.getPrice() + "</td>");
-                out.println("</tr>");
-            }
-            out.println("</table>");
-        }
     }
 
     @Override
