@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -28,11 +29,16 @@ public class CartServlet extends HttpServlet {
 
         List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
 
+        if (cart == null) {
+            cart = new ArrayList<>();
+            session.setAttribute("cart",cart);
+        }
+
         while ((line = reader.readLine()) != null) {
             out.println(line);
         }
 
-        if (cart.isEmpty()) {
+        if (cart.isEmpty() || cart == null) {
             out.println("<p>Корзина пустует</p>");
         } else {
             out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
@@ -51,16 +57,32 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-second.html");
+        HttpSession session = req.getSession();
 
-        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
+        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
 
-        PrintWriter out = resp.getWriter();
-
-        String line;
-
-        while ((line = reader.readLine()) != null) {
-            out.println(line);
+        if (cart == null) {
+            cart = new ArrayList<>();
+            session.setAttribute("cart",cart);
         }
+
+        if (!cart.isEmpty()) {
+            try(PrintWriter pw = new PrintWriter(new FileWriter("responds.txt", true))) {
+                for (Ticket ticket : cart) {
+                    pw.println(ticket.getName());
+                    pw.println(ticket.getDescription());
+                    pw.println(ticket.getPrice());
+                    pw.println("--------");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            cart.clear();
+
+            session.setAttribute("orderDone", "Заказ оформлен");
+        }
+
+        resp.sendRedirect("/cart");
     }
 }

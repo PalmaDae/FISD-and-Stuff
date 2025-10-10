@@ -44,8 +44,16 @@ public class FirstServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-ticket.html");
 
+        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
+
+        PrintWriter out = resp.getWriter();
+
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            out.println(line);
+        }
     }
-
-
 }

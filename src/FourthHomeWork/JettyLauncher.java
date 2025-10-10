@@ -15,7 +15,8 @@ public class JettyLauncher {
         context.addServlet(SecondServlet.class, "/second");
         context.addServlet(ThirdServlet.class, "/third");
         context.addServlet(FourthServlet.class, "/fourth");
-        context.addServlet(FifthServlet.class, "/fifth");
+        context.addServlet(TicketServlet.class, "/tickets");
+        context.addServlet(CartServlet.class, "/cart");
 
         server.start();
         System.out.println("Server started at http://localhost:6968/first");
