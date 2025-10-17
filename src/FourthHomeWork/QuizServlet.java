@@ -8,12 +8,13 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.*;
 
-@WebServlet("/second")
-public class SecondServlet extends HttpServlet {
+
+@WebServlet("/quiz")
+public class QuizServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-second.html");
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-fourth.html");
 
         BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
 

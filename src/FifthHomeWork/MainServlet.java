@@ -1,4 +1,4 @@
-package FourthHomeWork;
+package FifthHomeWork;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,8 +9,8 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.*;
 
-@WebServlet("/first")
-public class FirstServlet extends HttpServlet {
+@WebServlet("/main")
+public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
