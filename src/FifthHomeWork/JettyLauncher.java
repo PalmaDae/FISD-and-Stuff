@@ -19,7 +19,7 @@ public class JettyLauncher {
         context.addServlet(CartServlet.class, "/cart");
 
         server.start();
-        System.out.println("Server started at http://localhost:6968/first");
+        System.out.println("Server started at http://localhost:6968/main");
         server.join();
     }
 }

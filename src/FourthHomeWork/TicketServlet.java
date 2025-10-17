@@ -33,23 +33,23 @@ public class TicketServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-
-        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
-
-        if (cart == null) {
-            cart = new ArrayList<>();
-            session.setAttribute("cart",cart);
-        }
-
-        String name = req.getParameter("productName");
-        int price = Integer.parseInt(req.getParameter("productPrice"));
-        String description = req.getParameter("productDescription");
-
-        Ticket ticket = new Ticket(name,price,description);
-
-        cart.add(ticket);
-
-        session.setAttribute("cart",cart);
+//
+//        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
+//
+//        if (cart == null) {
+//            cart = new ArrayList<>();
+//            session.setAttribute("cart",cart);
+//        }
+//
+//        String name = req.getParameter("productName");
+//        int price = Integer.parseInt(req.getParameter("productPrice"));
+//        String description = req.getParameter("productDescription");
+//
+////        Ticket ticket = new Ticket(name,price,description);
+//
+//        cart.add(ticket);
+//
+//        session.setAttribute("cart",cart);
 
         resp.sendRedirect("/cart");
     }

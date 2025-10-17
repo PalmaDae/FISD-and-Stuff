@@ -8,12 +8,29 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @WebServlet("/cart")
 public class CartServlet extends HttpServlet {
+
+    private TicketDAO ticketDAO;
+
+    @Override
+    public void init() throws ServletException {
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
+            ticketDAO = new TicketDAO(connection);
+        } catch (SQLException e) {
+            throw new ServletException(e);
+        }
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
@@ -25,14 +42,14 @@ public class CartServlet extends HttpServlet {
 
         String line;
 
-        HttpSession session = req.getSession();
-
-        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
-
-        if (cart == null) {
-            cart = new ArrayList<>();
-            session.setAttribute("cart",cart);
+        List<Ticket> cart;
+        try {
+            cart = ticketDAO.getCartItems();
+        } catch (SQLException e) {
+            throw new ServletException(e);
         }
+
+        HttpSession session = req.getSession();
 
         while ((line = reader.readLine()) != null) {
             if (line.contains("<div id=\"cartContent\">")) {
@@ -63,29 +80,13 @@ public class CartServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
 
-        List<Ticket> cart = (List<Ticket>) session.getAttribute("cart");
-
-        if (cart == null) {
-            cart = new ArrayList<>();
-            session.setAttribute("cart",cart);
+        try {
+            ticketDAO.clearCart();
+        } catch (SQLException e) {
+            throw new ServletException(e);
         }
 
-        if (!cart.isEmpty()) {
-            try(PrintWriter pw = new PrintWriter(new FileWriter("responds.txt", true))) {
-                for (Ticket ticket : cart) {
-                    pw.println(ticket.getName());
-                    pw.println(ticket.getDescription());
-                    pw.println(ticket.getPrice());
-                    pw.println("--------");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            cart.clear();
-
-            session.setAttribute("orderDone", "Заказ оформлен");
-        }
+        session.setAttribute("orderDone", "Заказ сделан");
 
         resp.sendRedirect("/cart");
     }

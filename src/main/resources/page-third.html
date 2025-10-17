@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>
+            Пивные картиночки
+        </title>
+
+        <link href="style.css" rel = "stylesheet">
+
+        <script src = "scripts.js"></script>
+    </head>
+
+    <body class = "radiant" id = "change_theme">
+
+        <nav class ="denu">
+        <ul>
+            <li><a href = "#">Главная</a></li> <!-- Здесь будет шестой пейдж -->
+            <li class = "down">
+                <a href = "#" id = "menuButton">Разделы</a>
+                <ul class = "downContent" id = "menuList">
+                    <li><a href="/main">Про пивоварни</a></li>
+                    <li><a href="/history">История крафтового пива</a></li>
+                    <li><a href="/picture">Крутые картинки пива</a></li>
+                    <li><a href="/quiz">Пивная викторина</a></li>
+                    <li><a href="/tickets">Пивные фестивали</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">Контакты</a> </li> <!-- Здесь будет пятый пейдж -->
+            <li>
+                <button id = "changeButton" onclick="changeTheme()">Сменить тему</button>
+            </li>
+        </ul>
+    </nav>
+
+    <h1 id = "center_h1">Вы попали на сайт:Крутые пивные картиночки</h1>
+
+
+        <div class ="background">
+            
+        </div>
+
+        <h2 id = "center_h1">
+            А теперь вот картиночки с пивом
+        </h2>
+
+
+        <div id = "carousel">
+            
+            <div id = "carousel_second">
+                <button id = "prev"><-</button>
+                <img id = "carouselImage" src = "" width="400" height="400"><br>
+                <span id = "carouselCaption"></span>
+                <button id = "next">
+                    ->
+                </button>
+            </div>
+
+        </div>
+
+        <h2 id = "center_h1">Новости хмельного мира</h2>
+
+        <div id = "newsCont">
+
+        </div>
+
+        <button id = "loadnews">Загрузить новую новость</button>
+
+    </body>
+
+
+</html>
