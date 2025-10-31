@@ -5,7 +5,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 
 public class JettyLauncher {
     public static void main(String[] args) throws Exception {
-        Server server = new Server(6968);
+        Server server = new Server(8080);
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
@@ -17,9 +17,10 @@ public class JettyLauncher {
         context.addServlet(QuizServlet.class, "/quiz");
         context.addServlet(TicketServlet.class, "/tickets");
         context.addServlet(CartServlet.class, "/cart");
+        context.addServlet(AdminServlet.class, "/admin");
 
         server.start();
-        System.out.println("Server started at http://localhost:6968/main");
+        System.out.println("Server started at http://localhost:8080/main");
         server.join();
     }
 }

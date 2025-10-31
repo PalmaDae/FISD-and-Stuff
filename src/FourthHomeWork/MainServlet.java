@@ -26,8 +26,6 @@ public class MainServlet extends HttpServlet {
             out.println(line);
         }
 
-
-
         HttpSession session = req.getSession();
 
         Integer visitCnt = (Integer) session.getAttribute("visitCount");
