@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+
+
+    <head>
+
+        <title>Пиво - жизнь</title>
+
+        <link href="../css/style.css" rel="stylesheet">
+
+        <script src = "../js/scripts.js"></script>
+
+    </head>
+
+
+
+    <body class = "radiant" id = "change_theme">
+
+    <nav class ="denu">
+        <ul>
+            <li><a href = "#">Главная</a></li> <!-- Здесь будет шестой пейдж -->
+            <li class = "down">
+                <a href = "#" id = "menuButton">Разделы</a>
+                <ul class = "downContent" id = "menuList">
+                    <li><a href="/main">Про пивоварни</a></li>
+                    <li><a href="/history">История крафтового пива</a></li>
+                    <li><a href="/picture">Крутые картинки пива</a></li>
+                    <li><a href="/quiz">Пивная викторина</a></li>
+                    <li><a href="/tickets">Пивные фестивали</a></li>
+                </ul>
+            </li>
+            <li><a href = "#">Контакты</a> </li> <!-- Здесь будет седьмой пейдж -->
+            <li>
+                <button id = "changeButton" onclick="changeTheme()">Сменить тему</button>
+            </li>
+        </ul>
+    </nav>
+
+        <div class="info">
+
+            <h1 id="center_h1">Сайт про прикольное пиво</h1>
+
+            <h2 id = "beer_fact"></h2>
+
+            <h2>Точнее про две пивоварни</h2>
+
+
+        </div>
+
+        <table border="1" cellspacing="0" cellpadding="10">
+
+
+
+            <tr>
+
+                <th>Пивоварня</th>
+                <th>Логотип</th>
+                <th>Ссылка</th>
+                <th>Комментарий</th>
+
+            </tr>
+
+            <tr>
+
+            <td>Волковская</td>
+
+                <td>
+                    <img src="https://cdn1.ozonusercontent.com/s3/product-service-meta-media/2a60d99c-18d2-4697-b70e-358f69433200.jpg" 
+                        width="150" 
+                        height="150"
+                        alt="Здесь могла быть картинка">
+                </td>
+
+                <td><a href="https://wolfsshop.ru/">Официальный сайт</a></td>
+
+                <td>Популярная крафтовая пивоварня</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Таркос</td>
+
+                <td>
+
+                    <img src="https://475024.selcdn.ru/eatbeer/iblock/123/1238278d88a88334e2197bf9a486c2e2/139237a2ad003562ec0df7932cdd99b0.jpeg"
+                        width="150" 
+                        height="150"
+                        alt="Здесь тоже могла быть картинка">
+                
+                </td>
+
+                <td><a href="https://tarkos.ru/">Официальный сайт</a></td>
+
+                <td id="first_id">Не рекомендуется</td>
+
+            </tr>
+
+
+        </table>
+
+        
+        <div class="news">
+
+            <h2>Новости пивного мира</h2>
+
+            <ul>
+
+                <li><a href="https://www.gazeta.ru/social/news/2024/04/07/22725619.shtml">Новый сорт пива открыли в Германии</a></li>
+                <li><a href="https://vk.com/wall-135770581_392">Крафтовое движение растет</a></li>
+                <li><a href="https://beerkontora.ru/blogs/blog/chem-lager-otlichaetsya-ot-elya">Эль и лагер, в чём разница?</a></li>
+
+
+            </ul>
+
+        </div>
+
+        
+        <div class="vote">
+
+            <h2>Выберите лучшее пиво</h2>
+
+            <form>
+
+                <label><input type="radio" name="beer">Волковская APA</label><br>
+                <label><input type="radio" name="beer">Таркос кролик</label><br>
+                <label><input type="radio" name="beer">Тебе ещё нужны варианты?</label><br><br>
+
+                <button type="submit">Голосовать</button>
+
+            </form>
+
+        </div>
+
+        <div class="sources">
+
+            <p>18+ Продажа спиртных напитков несовершеннолетним лицам запрещена.</p>
+            <p>Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях информационные материалы и цены, размещенные на сайте, не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.</p>
+        
+        </div>
+
+    </body>
+</html>
