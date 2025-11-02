@@ -35,13 +35,7 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-cart.html");
-
-        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
-
         PrintWriter out = resp.getWriter();
-
-        String line;
 
         List<Ticket> cart;
         try {
@@ -52,28 +46,26 @@ public class CartServlet extends HttpServlet {
 
         HttpSession session = req.getSession();
 
-        while ((line = reader.readLine()) != null) {
-            if (line.contains("<div id=\"cartContent\">")) {
-                out.println(line);
+        req.getRequestDispatcher("/html/page-cart.html").include(req, resp);
 
-                if (cart.isEmpty()) {
-                    out.println("<p>Корзина пустует</p>");
-                } else {
-                    out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
-                    out.println("<tr><th>Фестиваль</th><th>Описание</th><th>Цена</th></tr>");
+        out.println("<div id=\"cartContent\">");
 
-                    for (Ticket ticket : cart) {
-                        out.println("<tr>");
-                        out.println("<td>" + ticket.getName() + "</td>");
-                        out.println("<td>" + ticket.getDescription() + "</td>");
-                        out.println("<td>" + ticket.getPrice() + "</td>");
-                        out.println("</tr>");
-                    }
-                    out.println("</table>");
-                }
+        if (cart.isEmpty()) {
+            out.println("<p>Корзина пустует</p>");
+        } else {
+            out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
+            out.println("<tr><th>Фестиваль</th><th>Описание</th><th>Цена</th></tr>");
+
+            for (Ticket ticket : cart) {
+                out.println("<tr>");
+                out.println("<td>" + ticket.getName() + "</td>");
+                out.println("<td>" + ticket.getDescription() + "</td>");
+                out.println("<td>" + ticket.getPrice() + "</td>");
+                out.println("</tr>");
             }
-            out.println(line);
+            out.println("</table>");
         }
+        out.println("</div>");
 
     }
 

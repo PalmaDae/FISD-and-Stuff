@@ -14,13 +14,9 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-first.html");
-
-        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
-
         PrintWriter out = resp.getWriter();
 
-        req.getRequestDispatcher("src/main/webapp/html/page-first.html").forward(req, resp);
+        req.getRequestDispatcher("/html/page-main.html").forward(req, resp);
 
         HttpSession session = req.getSession();
 
@@ -38,16 +34,6 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("page-ticket.html");
-
-        BufferedReader reader = new BufferedReader((new InputStreamReader(inputStream)));
-
-        PrintWriter out = resp.getWriter();
-
-        String line;
-
-        while ((line = reader.readLine()) != null) {
-            out.println(line);
-        }
+        req.getRequestDispatcher("/html/page-tickets.html").forward(req, resp);
     }
 }
