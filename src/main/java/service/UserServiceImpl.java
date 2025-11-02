@@ -2,6 +2,7 @@ package service;
 
 import dao.UserDao;
 import entity.User;
+import util.HashUtil;
 
 import java.sql.SQLException;
 
@@ -15,6 +16,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User authenticateUser(String username, String pass) throws SQLException {
+        User user = userDao.getUserByLogin(username);
+
+        if (HashUtil.verify(pass, user.getHashPassword())) {
+            return user;
+        }
         return null;
     }
 

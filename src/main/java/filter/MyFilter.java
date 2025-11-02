@@ -37,6 +37,10 @@ public class MyFilter extends HttpFilter {
             return;
         }
 
+        if (requestURI.equals("/admin") && !(user.getRole() == Role.ADMIN)) {
+            ((HttpServletResponse) res).sendRedirect("/main");
+        }
+
         if (user.getRole() == Role.GUEST) {
             ((HttpServletResponse) res).sendRedirect("/registration");
             return;

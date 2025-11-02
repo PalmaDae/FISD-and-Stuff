@@ -16,11 +16,11 @@ public class UserDao {
         this.connection = connection;
     }
 
-    public User getUserById(long id) throws SQLException {
-        String sql = "select * from users where id = ?";
+    public User getUserByLogin(String username) throws SQLException {
+        String sql = "select * from users where username = ?";
 
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
-            statement.setLong(1, id);
+            statement.setString(1, username);
 
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {

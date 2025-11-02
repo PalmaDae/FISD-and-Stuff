@@ -29,19 +29,19 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
+            resp.setContentType("text/html;charset=UTF-8");
 
-        String login = req.getParameter("login");
-        String pass = req.getParameter("password");
+            String login = req.getParameter("login");
+            String pass = req.getParameter("password");
 
-        String errorMsg = "";
+            String errorMsg = "";
 
-        if (login == null || login.trim().isEmpty()) {
-            errorMsg += "Логин не может быть пустым ";
-        }
-        if (pass == null || pass.trim().isEmpty()) {
-            errorMsg += "Пароль не может быть пустым ";
-        }
+            if (login == null || login.trim().isEmpty()) {
+                errorMsg += "Логин не может быть пустым ";
+            }
+            if (pass == null || pass.trim().isEmpty()) {
+                errorMsg += "Пароль не может быть пустым ";
+            }
         try {
             if (userService.isUserExist(login)) {
                 errorMsg += "Юзер существует ";
