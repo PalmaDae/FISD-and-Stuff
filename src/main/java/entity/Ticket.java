@@ -1,4 +1,4 @@
-package SixthHomeWork;
+package entity;
 
 public class Ticket {
     public int id;

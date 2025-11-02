@@ -14,21 +14,10 @@ import java.sql.SQLException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    private TicketDAO ticketDAO;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/html/page-login.html").forward(req, resp);
     }
 
-    @Override
-    public void init() throws ServletException {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
-            ticketDAO = new TicketDAO(connection);
-        } catch (SQLException e) {
-            throw new ServletException(e);
-        }
-    }
 }

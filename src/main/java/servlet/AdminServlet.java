@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import SixthHomeWork.Ticket;
+import entity.Ticket;
 import dao.TicketDAO;
 
 import java.io.*;
