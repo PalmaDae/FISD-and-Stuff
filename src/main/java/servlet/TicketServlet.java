@@ -30,7 +30,7 @@ public class TicketServlet extends HttpServlet {
             Connection connection = DriverManager.getConnection(
                     "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
             ticketDAO = new TicketDAO(connection);
-        } catch (SQLException e) {
+        } catch (SQLException e)     {
             throw new ServletException(e);
         }
     }
