@@ -3,6 +3,7 @@ package launcher;
 import filter.MyFilter;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
+import org.eclipse.jetty.jsp.JettyJspServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -16,11 +17,14 @@ public class JettyLauncher {
         Server server = new Server(8080);
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+
         context.setContextPath("/");
-        context.setResourceBase("/home/palmadae/IdeaProjects/FISD-and-Stuff/src/main/webapp");
+        context.setResourceBase("src/main/webapp");
 
         ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
         context.addServlet(defaultServlet, "/");
+
+        ServletHolder jsp = new ServletHolder("jsp", JettyJspServlet.class);
 
         context.addFilter(MyFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
 

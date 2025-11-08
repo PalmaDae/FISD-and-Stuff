@@ -13,6 +13,6 @@ public class PictureServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/html/page-picture.html").forward(req, resp);
+        req.getRequestDispatcher("/jsp/page-picture.jsp").forward(req, resp);
     }
 }

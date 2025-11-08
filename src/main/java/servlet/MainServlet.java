@@ -14,22 +14,7 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
-
-        req.getRequestDispatcher("/html/page-main.html").forward(req, resp);
-
-        HttpSession session = req.getSession();
-
-        Integer visitCnt = (Integer) session.getAttribute("visitCount");
-
-        if (visitCnt == null) {
-            visitCnt = 1;
-        }else {
-            visitCnt++;
-        }
-
-        session.setAttribute("visitCount", visitCnt);
-        out.println("<p>Количество запросов из этой сессии: " + session.getAttribute("visitCount") + "</p>");
+        req.getRequestDispatcher("/jsp/page-main.jsp").forward(req, resp);
     }
 
     @Override

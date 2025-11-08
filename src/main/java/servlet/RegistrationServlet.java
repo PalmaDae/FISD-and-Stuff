@@ -23,7 +23,7 @@ public class RegistrationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/html/page-registration.html").forward(req, resp);
+        req.getRequestDispatcher("/jsp/page-registration.jsp").forward(req, resp);
     }
 
 

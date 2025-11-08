@@ -34,9 +34,6 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = resp.getWriter();
-
         List<Ticket> cart;
         try {
             cart = ticketDAO.getCartItems();
@@ -44,28 +41,18 @@ public class CartServlet extends HttpServlet {
             throw new ServletException(e);
         }
 
+        req.setAttribute("cart", cart);
+
         HttpSession session = req.getSession();
 
-        req.getRequestDispatcher("/html/page-cart.html").include(req, resp);
+        String orderDone = (String) session.getAttribute("orderDone");
 
-        out.println("<div id=\"cartContent\">");
-
-        if (cart.isEmpty()) {
-            out.println("<p>Корзина пустует</p>");
-        } else {
-            out.println("<table border = '1' cellspacing = '0' cellpadding ='10'>");
-            out.println("<tr><th>Фестиваль</th><th>Описание</th><th>Цена</th></tr>");
-
-            for (Ticket ticket : cart) {
-                out.println("<tr>");
-                out.println("<td>" + ticket.getName() + "</td>");
-                out.println("<td>" + ticket.getDescription() + "</td>");
-                out.println("<td>" + ticket.getPrice() + "</td>");
-                out.println("</tr>");
-            }
-            out.println("</table>");
+        if (orderDone != null) {
+            req.setAttribute("orderDone", orderDone);
+            session.removeAttribute("orderDone");
         }
-        out.println("</div>");
+
+        req.getRequestDispatcher("/jsp/page-cart.jsp").include(req, resp);
 
     }
 
