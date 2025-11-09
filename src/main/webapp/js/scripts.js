@@ -100,10 +100,10 @@ function changeTheme() {
 
     if (block.classList.contains("radiant")) {
         block.classList.remove("radiant");
-        block.classList.add("dark");
-        localStorage.setItem('theme', 'dark');
+        block.classList.add("dire");
+        localStorage.setItem('theme', 'dire');
     } else {
-        block.classList.remove("dark");
+        block.classList.remove("dire");
         block.classList.add("radiant");
         localStorage.setItem('theme', 'radiant');
     }
@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
     const savedTheme = localStorage.getItem('theme');
 
     if (savedTheme) {
-        block.classList.remove('radiant', 'dark');
+        block.classList.remove('radiant', 'dire');
         block.classList.add(savedTheme);
     }
 });
