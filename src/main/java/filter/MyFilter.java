@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-//@WebFilter("/*")
+@WebFilter("/*")
 public class MyFilter extends HttpFilter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
@@ -22,6 +22,8 @@ public class MyFilter extends HttpFilter {
 
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
+
+        String path = ((HttpServletRequest) req).getServletPath();
 
         if (requestURI.startsWith(request.getContextPath() + "/css") ||
                 requestURI.startsWith(request.getContextPath() + "/js") ||
@@ -33,7 +35,7 @@ public class MyFilter extends HttpFilter {
             return;
         }
 
-        System.out.println("Filter check: " + requestURI);
+        System.out.println("Filter check: " + path);
 
         System.out.println("Redirecting to /login");
 
@@ -46,17 +48,17 @@ public class MyFilter extends HttpFilter {
             session.setAttribute("user", user);
         }
 
-        if (requestURI.equals("/main") || requestURI.equals("/registration") || requestURI.equals("/login")) {
+        if (path.equals("/main") || path.equals("/registration") || path.equals("/login")) {
             chain.doFilter(req, res);
             return;
         }
 
-        if (requestURI.equals("/admin") && !(user.getRole() == Role.ADMIN)) {
-            ((HttpServletResponse) res).sendRedirect("/main");
+        if (path.equals("/admin") && !(user.getRole() == Role.ADMIN)) {
+            response.sendRedirect(request.getContextPath() + "/main");
         }
 
         if (user.getRole() == Role.GUEST) {
-            ((HttpServletResponse) res).sendRedirect("/registration");
+            response.sendRedirect(request.getContextPath() + "/registration");
             return;
         }
 

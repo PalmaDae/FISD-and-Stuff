@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
             else {
                 HttpSession session = req.getSession();
                 session.setAttribute("user", user);
-                resp.sendRedirect("/main");
+                resp.sendRedirect(req.getContextPath() + "/main");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -69,13 +69,6 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
-            userDao = new UserDao(connection);
-            userService = new UserServiceImpl(userDao);
-        } catch (SQLException e) {
-            throw new ServletException(e);
-        }
+        this.userService = new UserServiceImpl(userDao);
     }
 }

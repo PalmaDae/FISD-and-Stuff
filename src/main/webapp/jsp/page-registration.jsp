@@ -11,7 +11,7 @@
 
     <body>
 
-        <form method="post" action="/registration" accept-charset="UTF-8">
+        <form method="post" action="${pageContext.request.contextPath}/registration" accept-charset="UTF-8">
 
             <input id = "login" name="login" type="text" placeholder="Введи логин, блин"> <br>
             <input id = "password" name="password" type="password" placeholder="Введи пароль, блин"><br>

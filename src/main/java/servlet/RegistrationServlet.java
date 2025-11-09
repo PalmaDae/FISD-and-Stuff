@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import service.TicketServiceImpl;
 import service.UserServiceImpl;
 import util.HashUtil;
 
@@ -58,7 +59,7 @@ public class RegistrationServlet extends HttpServlet {
 
         try {
             userService.saveNewUser(login,pass);
-            resp.sendRedirect("/login");
+            resp.sendRedirect(req.getContextPath() + "/login");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -67,13 +68,6 @@ public class RegistrationServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
-            userDao = new UserDao(connection);
-            userService = new UserServiceImpl(userDao);
-        } catch (SQLException e) {
-            throw new ServletException(e);
-        }
+        this.userService = new UserServiceImpl(userDao);
     }
 }
