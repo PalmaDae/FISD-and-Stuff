@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="https://jakarta.ee/jstl/core" %>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -19,57 +20,40 @@
 
 <table border="1" cellspacing="0" cellpadding="10">
     <tr>
-        <th>Фестиваль</th>
-        <th>Постер</th>
+        <th>Мастер</th>
+        <th>Фото</th>
         <th>Описание</th>
         <th>Цена</th>
         <th>Добавить</th>
     </tr>
 
-    <tr>
-        <td>Oktoberfest Munich</td>
-        <td>
-            <img src="" width="150" height="100" alt="Oktoberfest">
-        </td>
-        <td>Самый знаменитый фестиваль пива в Германии.</td>
-        <td>₽4500</td>
-        <td>
-            <form action="/tickets" method="post">
-                <input type="hidden" name="ticketId" value="1">
-                <button type="submit">В корзину</button>
-            </form>
-        </td>
-    </tr>
 
-    <tr>
-        <td>Belgian Beer Weekend</td>
-        <td>
-            <img src="" width="150" height="100" alt="Belgian Beer Weekend">
-        </td>
-        <td>Праздник пива в Брюсселе с участием более 50 пивоварен.</td>
-        <td>₽3900</td>
-        <td>
-            <form action="/tickets" method="post">
-                <input type="hidden" name="ticketId" value="2">
-                <button type="submit">В корзину</button>
-            </form>
-        </td>
-    </tr>
+    <c:forEach var="ticket" items="${list}">
 
-    <tr>
-        <td>Craft Beer Helsinki</td>
-        <td>
-            <img src="" width="150" height="100" alt="Craft Beer Helsinki">
-        </td>
-        <td>Скандинавский фестиваль крафтового пива под открытым небом.</td>
-        <td>₽3100</td>
-        <td>
-            <form action="/tickets" method="post">
-                <input type="hidden" name="ticketId" value="3">
-                <button type="submit">В корзину</button>
-            </form>
-        </td>
-    </tr>
+        <tr>
+            <td>
+                ${ticket.name}
+            </td>
+
+            <td>
+                0_0
+            </td>
+            <td>
+                ${ticket.description}
+            </td>
+            <td>
+                ₽${ticket.price}
+            </td>
+            <td>
+                <form action="${pageContext.request.contextPath}/tickets" method="post">
+                    <input type="hidden" name="ticketId" value="${ticket.id}">
+                    <button type="submit">В корзину</button>
+                </form>
+            </td>
+        </tr>
+
+    </c:forEach>
+
 </table>
 
 <div class="sources">

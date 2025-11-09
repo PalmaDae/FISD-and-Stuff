@@ -1,38 +1,45 @@
 package servlet;
 
+import entity.Ticket;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import dao.TicketDAO;
+import service.TicketServiceImpl;
 
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 
 @WebServlet("/tickets")
 public class TicketServlet extends HttpServlet {
     private TicketDAO ticketDAO;
+    private TicketServiceImpl ticketService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
 
+        try {
+            List<Ticket> list = ticketService.getTickets();
+            req.setAttribute("list", list);
+        } catch (SQLException e) {
+            throw new ServletException(e);
+        }
+
         req.getRequestDispatcher("/jsp/page-tickets.jsp").forward(req, resp);
+
+
     }
 
     @Override
     public void init() throws ServletException {
-        try {
-            Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest", "postgres","010909");
-            ticketDAO = new TicketDAO(connection);
-        } catch (SQLException e)     {
-            throw new ServletException(e);
-        }
+        this.ticketService = new TicketServiceImpl();
     }
 
     @Override

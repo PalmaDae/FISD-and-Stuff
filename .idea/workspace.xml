@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="починко">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/TicketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +28,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -88,7 +94,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.25974026&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -138,9 +144,9 @@
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/10.1.48" />
-          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-10.1.48" />
-          <option name="version" value="10.1.48.0" />
+          <option name="name" value="Apache Tomcat/11.0.13" />
+          <option name="path" value="$USER_HOME$/Downloads/apache-tomcat-11.0.13" />
+          <option name="version" value="11.0.13.0" />
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
@@ -171,6 +177,7 @@
       <workItem from="1762690057899" duration="151000" />
       <workItem from="1762690252119" duration="971000" />
       <workItem from="1762691237207" duration="1094000" />
+      <workItem from="1762701389189" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
