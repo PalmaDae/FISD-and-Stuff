@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="new dataBase for users">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="yeah">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +175,11 @@
       <workItem from="1762713048738" duration="1132000" />
       <workItem from="1762722121993" duration="24000" />
       <workItem from="1762723120781" duration="1557000" />
+      <workItem from="1762724723494" duration="444000" />
+      <workItem from="1762725697107" duration="24000" />
+      <workItem from="1762726044502" duration="24000" />
+      <workItem from="1762726159125" duration="15000" />
+      <workItem from="1762726739153" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -313,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762724437303</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="yeah">
+      <option name="closed" value="true" />
+      <created>1762725020384</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762725020384</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +360,8 @@
     <MESSAGE value="html and gags" />
     <MESSAGE value="Потом" />
     <MESSAGE value="new dataBase for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="new dataBase for users" />
+    <MESSAGE value="yeah" />
+    <option name="LAST_COMMIT_MESSAGE" value="yeah" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
