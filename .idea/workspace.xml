@@ -9,10 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="some gags">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="html and gags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-guide.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-guide.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
       <list>
         <option value="Enum" />
         <option value="Jsp File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -134,8 +135,11 @@
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="catalinaBase" value="$USER_HOME$/.SmartTomcat/FISD-and-Stuff/tomcat-app" />
-      <option name="contextPath" value="/" />
+      <option name="contextPath" value="/palmadae" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -174,6 +178,7 @@
       <workItem from="1762691237207" duration="1094000" />
       <workItem from="1762701389189" duration="6649000" />
       <workItem from="1762711503140" duration="1415000" />
+      <workItem from="1762713048738" duration="1132000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -287,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762709610557</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="html and gags">
+      <option name="closed" value="true" />
+      <created>1762713297588</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762713297588</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +332,8 @@
     <MESSAGE value=")))))))" />
     <MESSAGE value="починко" />
     <MESSAGE value="some gags" />
-    <option name="LAST_COMMIT_MESSAGE" value="some gags" />
+    <MESSAGE value="html and gags" />
+    <option name="LAST_COMMIT_MESSAGE" value="html and gags" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
