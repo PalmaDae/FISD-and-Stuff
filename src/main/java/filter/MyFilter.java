@@ -14,11 +14,24 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-
+//@WebFilter("/*")
 public class MyFilter extends HttpFilter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         String requestURI = ((HttpServletRequest) req).getRequestURI();
+
+        HttpServletRequest request = (HttpServletRequest) req;
+        HttpServletResponse response = (HttpServletResponse) res;
+
+        if (requestURI.startsWith(request.getContextPath() + "/css") ||
+                requestURI.startsWith(request.getContextPath() + "/js") ||
+                requestURI.startsWith(request.getContextPath() + "/images") ||
+                requestURI.endsWith(".png") ||
+                requestURI.endsWith(".jpg") ||
+                requestURI.endsWith(".gif")) {
+            chain.doFilter(req, res);
+            return;
+        }
 
         System.out.println("Filter check: " + requestURI);
 

@@ -4,15 +4,14 @@
 
     <nav class ="denu">
             <ul>
-                <li><a href = "${pageContext.request.contextPath}/">Главная</a></li>
+                <li><a href = "${pageContext.request.contextPath}/main">Главная</a></li>
                 <li class = "down">
                     <a href = "#" id = "menuButton">Разделы</a>
                     <ul class = "downContent" id = "menuList">
-                        <li><a href="${pageContext.request.contextPath}/main">Про пивоварни</a></li>
-                        <li><a href="${pageContext.request.contextPath}/history">История крафтового пива</a></li>
-                        <li><a href="${pageContext.request.contextPath}/picture">Крутые картинки пива</a></li>
-                        <li><a href="${pageContext.request.contextPath}/quiz">Пивная викторина</a></li>
-                        <li><a href="${pageContext.request.contextPath}/tickets">Пивные фестивали</a></li>
+                        <li><a href="${pageContext.request.contextPath}/history">Справочник мира DnD</a></li>
+                        <li><a href="${pageContext.request.contextPath}/picture">Галерея артов наших юзеров</a></li>
+                        <li><a href="${pageContext.request.contextPath}/quiz">Насколько вы знаете BG3</a></li>
+                        <li><a href="${pageContext.request.contextPath}/tickets">Аренда мастера</a></li>
                     </ul>
                 </li>
                 <li>
