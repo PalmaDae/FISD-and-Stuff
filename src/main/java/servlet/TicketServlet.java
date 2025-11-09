@@ -28,6 +28,7 @@ public class TicketServlet extends HttpServlet {
 
         req.setAttribute("username",username);
 
+
         try {
             List<Ticket> list = ticketService.getTickets();
             req.setAttribute("list", list);

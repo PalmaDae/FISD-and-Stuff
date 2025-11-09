@@ -9,21 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="Потом">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="new dataBase for users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/TicketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/GuideServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/GuideServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/QuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/QuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +91,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.25974026&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -187,7 +175,7 @@
       <workItem from="1762711503140" duration="1415000" />
       <workItem from="1762713048738" duration="1132000" />
       <workItem from="1762722121993" duration="24000" />
-      <workItem from="1762723120781" duration="1232000" />
+      <workItem from="1762723120781" duration="1557000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -317,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762720010216</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="new dataBase for users">
+      <option name="closed" value="true" />
+      <created>1762724437303</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762724437303</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +347,8 @@
     <MESSAGE value="some gags" />
     <MESSAGE value="html and gags" />
     <MESSAGE value="Потом" />
-    <option name="LAST_COMMIT_MESSAGE" value="Потом" />
+    <MESSAGE value="new dataBase for users" />
+    <option name="LAST_COMMIT_MESSAGE" value="new dataBase for users" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
