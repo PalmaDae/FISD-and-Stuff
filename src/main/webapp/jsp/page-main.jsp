@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Пиво - жизнь</title>
+    <title>Dungeons and Gags</title>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 </head>
