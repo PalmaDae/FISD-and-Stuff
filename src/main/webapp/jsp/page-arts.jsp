@@ -13,26 +13,26 @@
 
   <jsp:include page="/jsp/header.jsp" />
 
-  <h1 id = "center_h1">Вы попали на сайт:Крутые пивные картиночки</h1>
+    <h1 id = "center_h1">Вы попали на сайт:Крутые пивные картиночки</h1>
 
 
-  <div class ="background">
+    <div class ="background">
 
-  </div>
+    </div>
 
-  <h2 id = "center_h1">
+    <h2 id = "center_h1">
     А теперь вот картиночки с пивом
-  </h2>
+    </h2>
 
 
-  <div id = "carousel">
+    <div id = "carousel">
 
     <div id = "carousel_second">
       <button id = "prev"><-</button>
       <img id = "carouselImage" src = "" width="400" height="400"><br>
       <span id = "carouselCaption"></span>
       <button id = "next">
-        ->
+      ->
       </button>
     </div>
 

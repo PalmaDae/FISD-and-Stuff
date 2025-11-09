@@ -9,25 +9,25 @@
     <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 </head>
 
-<body>
+    <body>
 
-<form method="post" action="/registration" accept-charset="UTF-8">
+        <form method="post" action="/registration" accept-charset="UTF-8">
 
-    <input id = "login" name="login" type="text" placeholder="Введи логин, блин"> <br>
-    <input id = "password" name="password" type="password" placeholder="Введи пароль, блин"><br>
+            <input id = "login" name="login" type="text" placeholder="Введи логин, блин"> <br>
+            <input id = "password" name="password" type="password" placeholder="Введи пароль, блин"><br>
 
-    <input type="submit">
+            <input type="submit">
 
-</form>
+        </form>
 
-<form action="/login" method="get">
+        <form action="/login" method="get">
 
-    <button type ="submit"?>
-        У меня уже есть аккаунт
-    </button>
+            <button type ="submit"?>
+                У меня уже есть аккаунт
+            </button>
 
-</form>
+        </form>
 
-</body>
+    </body>
 
 </html>

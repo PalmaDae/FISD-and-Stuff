@@ -4,11 +4,11 @@
 
 <html>
 
-<head>
-    <title>Справочник</title>
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
-</head>
+    <head>
+        <title>Справочник</title>
+        <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
+        <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+    </head>
 
 
     <body class = "radiant" id = "change_theme">

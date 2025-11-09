@@ -1,34 +1,34 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <title>Корзина</title>
-    <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
-    <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
-</head>
+    <head>
+        <title>Корзина</title>
+        <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
+        <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+    </head>
 
-<body class="radiant" id="change_theme">
+    <body class="radiant" id="change_theme">
 
-<jsp:include page="/jsp/header.jsp" />
+        <jsp:include page="/jsp/header.jsp" />
 
-<div class="info">
-    <h1 id="center_h1">Ваша корзина</h1>
-    <h2>Список выбранных билетов</h2>
-</div>
+        <div class="info">
+            <h1 id="center_h1">Ваша корзина</h1>
+            <h2>Список выбранных билетов</h2>
+        </div>
 
-<div id="cartContent">
+        <div id="cartContent">
 
-</div>
+        </div>
 
-<form action="/cart" method="post">
-    <button type="submit">Оформить заказ</button>
-</form>
+        <form action="/cart" method="post">
+            <button type="submit">Оформить заказ</button>
+        </form>
 
-<p><a href="/tickets">← Вернуться к билетам</a></p>
+        <p><a href="/tickets">← Вернуться к билетам</a></p>
 
-<div class="sources">
-    <p>Спасибо, что выбираете пивные фестивали с нами!</p>
-</div>
+        <div class="sources">
+            <p>Спасибо, что выбираете пивные фестивали с нами!</p>
+        </div>
 
-</body>
+    </body>
 </html>
