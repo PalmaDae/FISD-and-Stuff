@@ -69,6 +69,6 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
-        this.userService = new UserServiceImpl(userDao);
+        this.userService = new UserServiceImpl();
     }
 }

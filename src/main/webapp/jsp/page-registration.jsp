@@ -20,7 +20,7 @@
 
         </form>
 
-        <form action="/login" method="get">
+        <form action="${pageContext.request.contextPath}/login" method="get">
 
             <button type ="submit"?>
                 У меня уже есть аккаунт

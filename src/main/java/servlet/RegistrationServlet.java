@@ -3,6 +3,7 @@ package servlet;
 import dao.UserDao;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -59,15 +60,23 @@ public class RegistrationServlet extends HttpServlet {
 
         try {
             userService.saveNewUser(login,pass);
+
+            Cookie userCookie = new Cookie("user", login);
+
+            userCookie.setMaxAge(60 * 60 * 24);
+
+            userCookie.setPath("/");
+
+            resp.addCookie(userCookie);
+
             resp.sendRedirect(req.getContextPath() + "/login");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @Override
     public void init() throws ServletException {
-        this.userService = new UserServiceImpl(userDao);
+        this.userService = new UserServiceImpl();
     }
 }

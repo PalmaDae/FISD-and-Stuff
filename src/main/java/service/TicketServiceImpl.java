@@ -20,7 +20,7 @@ public class TicketServiceImpl {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/characters",
+                    "jdbc:postgresql://localhost:5432/beerfest",
                     "postgres",
                     "010909"
             );

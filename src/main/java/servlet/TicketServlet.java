@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import dao.TicketDAO;
 import service.TicketServiceImpl;
+import service.UserServiceImpl;
 
 import java.io.*;
 import java.sql.SQLException;
@@ -22,6 +23,10 @@ public class TicketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
+
+        String username = UserServiceImpl.checkUser(req);
+
+        req.setAttribute("username",username);
 
         try {
             List<Ticket> list = ticketService.getTickets();

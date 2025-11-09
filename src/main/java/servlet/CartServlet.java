@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import entity.Ticket;
 import dao.TicketDAO;
+import service.UserServiceImpl;
 
 import java.io.*;
 import java.sql.Connection;
@@ -34,6 +35,11 @@ public class CartServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String username = UserServiceImpl.checkUser(req);
+
+        req.setAttribute("username",username);
+
         List<Ticket> cart;
         try {
             cart = ticketDAO.getCartItems();

@@ -7,7 +7,7 @@
         <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
     </head>
     <body>
-        <form method="post" action="/login">
+        <form method="post" action="${pageContext.request.contextPath}/login">
             <p>
                 <input type="text" name="login" id="login" placeholder="Введи логин, блин">
             </p>
