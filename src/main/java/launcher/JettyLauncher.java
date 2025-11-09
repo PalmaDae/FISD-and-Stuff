@@ -2,12 +2,12 @@ package launcher;
 
 import filter.MyFilter;
 import jakarta.servlet.DispatcherType;
-import jakarta.servlet.Filter;
 import org.eclipse.jetty.jsp.JettyJspServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import org.eclipse.jetty.webapp.WebAppContext;
 import servlet.*;
 
 import java.util.EnumSet;
@@ -16,18 +16,34 @@ public class JettyLauncher {
     public static void main(String[] args) throws Exception {
         Server server = new Server(8080);
 
-        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-
+        WebAppContext context = new WebAppContext();
         context.setContextPath("/");
         context.setResourceBase("src/main/webapp");
+        context.setParentLoaderPriority(true);
+        context.setContextPath("/");
+        context.setResourceBase("src/main/webapp");
+        context.setParentLoaderPriority(true);
 
-        ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
-        context.addServlet(defaultServlet, "/");
-
+        // JSP
         ServletHolder jsp = new ServletHolder("jsp", JettyJspServlet.class);
+        jsp.setInitParameter("logVerbosityLevel", "DEBUG");
+        jsp.setInitParameter("fork", "false");
+        jsp.setInitParameter("xpoweredBy", "false");
+        jsp.setInitParameter("compilerTargetVM", "1.8");
+        jsp.setInitParameter("compilerSourceVM", "1.8");
+        jsp.setInitParameter("keepgenerated", "true");
+        context.addServlet(jsp, "*.jsp");
 
+        // Статика
+        ServletHolder defaultServlet = new ServletHolder("default", DefaultServlet.class);
+        context.addServlet(defaultServlet, "/css/*");
+        context.addServlet(defaultServlet, "/js/*");
+        context.addServlet(defaultServlet, "/images/*");
+
+        // Фильтр
         context.addFilter(MyFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
 
+        // Сервлеты
         context.addServlet(MainServlet.class, "/main");
         context.addServlet(HistoryServlet.class, "/history");
         context.addServlet(PictureServlet.class, "/picture");
