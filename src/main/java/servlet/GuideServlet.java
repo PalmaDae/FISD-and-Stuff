@@ -8,11 +8,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.*;
 
-@WebServlet("/picture")
-public class PictureServlet extends HttpServlet {
+@WebServlet("/guide")
+public class GuideServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        req.getRequestDispatcher("/jsp/page-picture.jsp").forward(req, resp);
+        req.getRequestDispatcher("/jsp/page-guide.jsp").forward(req, resp);
     }
 }

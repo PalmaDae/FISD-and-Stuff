@@ -8,8 +8,8 @@
                 <li class = "down">
                     <a href = "#" id = "menuButton">Разделы</a>
                     <ul class = "downContent" id = "menuList">
-                        <li><a href="${pageContext.request.contextPath}/history">Справочник мира DnD</a></li>
-                        <li><a href="${pageContext.request.contextPath}/picture">Галерея артов наших юзеров</a></li>
+                        <li><a href="${pageContext.request.contextPath}/guide">Справочник мира DnD</a></li>
+                        <li><a href="${pageContext.request.contextPath}/arts">Галерея артов наших юзеров</a></li>
                         <li><a href="${pageContext.request.contextPath}/quiz">Насколько вы знаете BG3</a></li>
                         <li><a href="${pageContext.request.contextPath}/tickets">Аренда мастера</a></li>
                     </ul>

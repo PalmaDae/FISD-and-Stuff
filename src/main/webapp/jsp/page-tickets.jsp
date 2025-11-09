@@ -1,10 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="https://jakarta.ee/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
-    <title>Пиво - жизнь</title>
+    <title>Мастера</title>
     <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 </head>
