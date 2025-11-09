@@ -20,13 +20,13 @@ public class TicketServiceImpl {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest",
+                    "jdbc:postgresql://localhost:5432/characters",
                     "postgres",
                     "010909"
             );
             return new TicketDAO(connection);
         } catch (ClassNotFoundException | SQLException e) {
-            throw new RuntimeException("Не удалось инициализировать TicketDAO", e);
+            throw new RuntimeException(e);
         }
     }
 

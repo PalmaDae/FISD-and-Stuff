@@ -1,6 +1,5 @@
 package servlet;
 
-import dao.TicketDAO;
 import dao.UserDao;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
