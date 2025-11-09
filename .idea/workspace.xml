@@ -12,6 +12,8 @@
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="some gags">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +174,7 @@
       <workItem from="1762690252119" duration="971000" />
       <workItem from="1762691237207" duration="1094000" />
       <workItem from="1762701389189" duration="6649000" />
+      <workItem from="1762711503140" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
