@@ -12,7 +12,6 @@
 
         <div class="info">
             <h1 id="center_h1">Dungeons and Gags</h1>
-<%--            <h2 id="dnd_fact"></h2>--%>
         </div>
 
     <section class="random_fact">

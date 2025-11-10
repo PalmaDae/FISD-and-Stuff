@@ -266,4 +266,12 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 }
-/* */
+/* Menu page */
+.random_fact {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.random_fact h3 {
+    color: #b08b4f;
+}

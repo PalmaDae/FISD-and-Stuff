@@ -9,10 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="main page campaign">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="Чистка">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +185,7 @@
       <workItem from="1762726777821" duration="241000" />
       <workItem from="1762757675273" duration="5076000" />
       <workItem from="1762764342491" duration="4246000" />
-      <workItem from="1762775912699" duration="6252000" />
+      <workItem from="1762775912699" duration="6878000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -395,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762782513585</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Чистка">
+      <option name="closed" value="true" />
+      <created>1762783229694</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1762783229694</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hm3 is over" />
     <MESSAGE value="two-thousand-yard stare" />
     <MESSAGE value="Что-то похожее на админ панель" />
     <MESSAGE value="максим помоги" />
@@ -438,7 +445,8 @@
     <MESSAGE value="chrs for users" />
     <MESSAGE value="footer and main-page" />
     <MESSAGE value="main page campaign" />
-    <option name="LAST_COMMIT_MESSAGE" value="main page campaign" />
+    <MESSAGE value="Чистка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Чистка" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
