@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="ПОЧИНИЛ JS">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="галлерея но надо поменять размер">
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +81,7 @@
     "Tomcat Server.Tomcat 10.1.48.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/palmadae/IdeaProjects/FISD-and-Stuff/src/main/webapp/images",
+    "last_opened_file_path": "/home/palmadae/IdeaProjects/FISD-and-Stuff/src/main/webapp/images/arts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,11 +96,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images/arts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/SixthHomeWork" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/FifthHomeWork" />
-      <recent name="$PROJECT_DIR$/src/FourthHomeWork" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/jsp" />
@@ -190,7 +185,7 @@
       <workItem from="1762764342491" duration="4246000" />
       <workItem from="1762775912699" duration="7062000" />
       <workItem from="1762788513139" duration="4285000" />
-      <workItem from="1762806560137" duration="1174000" />
+      <workItem from="1762806560137" duration="1506000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -424,7 +419,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762788971620</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="галлерея но надо поменять размер">
+      <option name="closed" value="true" />
+      <created>1762807942005</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1762807942005</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="максим помоги" />
     <MESSAGE value="Рабочий вариант с JettyLauncher" />
     <MESSAGE value="регистрация" />
     <MESSAGE value="Логаут и логин" />
@@ -467,7 +469,8 @@
     <MESSAGE value="Чистка" />
     <MESSAGE value="random fact" />
     <MESSAGE value="ПОЧИНИЛ JS" />
-    <option name="LAST_COMMIT_MESSAGE" value="ПОЧИНИЛ JS" />
+    <MESSAGE value="галлерея но надо поменять размер" />
+    <option name="LAST_COMMIT_MESSAGE" value="галлерея но надо поменять размер" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

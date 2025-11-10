@@ -284,10 +284,17 @@
     gap: 10px;
 }
 
+.gallery-item {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
 .gallery-item img {
     width: 100%;
     cursor: pointer;
     transition: transform 0.3s;
+    object-fit: cover;
 }
 
 .gallery-item img:hover {
