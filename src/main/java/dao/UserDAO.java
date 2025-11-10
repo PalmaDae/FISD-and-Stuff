@@ -3,10 +3,9 @@ package dao;
 import entity.Role;
 import entity.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserDAO {
     private Connection connection;
@@ -23,11 +22,23 @@ public class UserDAO {
 
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
+                    Array sqlArray = rs.getArray("chacharacter_ids");
+                    List<Long> chacharacterIds = new ArrayList<>();
+
+                    if (sqlArray != null) {
+                        Long[] ids =  (Long[]) sqlArray.getArray();
+
+                        for (Long id : ids) {
+                            chacharacterIds.add(id);
+                        }
+                    }
+
                     return new User(
                             rs.getLong("id"),
                             rs.getString("username"),
                             rs.getString("hash_pass"),
-                            Role.valueOf(rs.getString("role"))
+                            Role.valueOf(rs.getString("role")),
+                            chacharacterIds
                     );
                 }
             }

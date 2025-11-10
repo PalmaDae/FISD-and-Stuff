@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 @WebFilter("/*")
 public class MyFilter extends HttpFilter {
@@ -44,7 +45,7 @@ public class MyFilter extends HttpFilter {
         User user = (User) session.getAttribute("user");
 
         if (user == null) {
-            user = new User(0, "guest", "", Role.GUEST);
+            user = new User(0, "guest", "", Role.GUEST, new ArrayList<>());
             session.setAttribute("user", user);
         }
 

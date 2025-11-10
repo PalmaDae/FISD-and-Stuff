@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class Charakter {
-    int id;
+    long id;
     String name;
     String playerName;
     Race race;
@@ -26,7 +26,7 @@ public class Charakter {
     int silver;
     int copper;
 
-    public Charakter(int id, String name, String playerName, Race race, Clasz clasz, int level, int strength, int intelligence, int wisdom, int charisma, int dexterity, int constitution, int speed, int armorClass, int initiative, int hitPoints, int temporaryHitPoints, int hitDice, int gold, int silver, int copper) {
+    public Charakter(long id, String name, String playerName, Race race, Clasz clasz, int level, int strength, int intelligence, int wisdom, int charisma, int dexterity, int constitution, int speed, int armorClass, int initiative, int hitPoints, int temporaryHitPoints, int hitDice, int gold, int silver, int copper) {
         this.id = id;
         this.name = name;
         this.playerName = playerName;
