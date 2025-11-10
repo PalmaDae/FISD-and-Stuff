@@ -1,53 +1,9 @@
-#first_id {
-    color: brown;
-}
-
 #dnd_fact {
     text-align: center;
 }
 
-.picture_tarkos {
-    border: 2px solid blueviolet;
-}
-
-
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #center_h1 {
   text-align: center;
-}
-
-.sources {
-    text-align: center;
-}
-
-.history {
-    color:crimson ;
-}
-
-#carousel {
-    text-align: center;
-}
-
-#carousel_second {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.radiant {
-    background-color: #fff;
-    color: #000;
-}
-
-.dire {
-    background-color: #000;
-    color: #fff;
 }
 
 .denu ul {
@@ -96,6 +52,18 @@
     display: block;
     opacity: 1;
     transform: translateY(0);
+}
+
+/*Change Theme Button*/
+
+.radiant {
+    background-color: #fff;
+    color: #000;
+}
+
+.dire {
+    background-color: #000;
+    color: #fff;
 }
 
 #changeButton {
@@ -177,6 +145,8 @@
     font-size: 14px;
 }
 
+/*Guide page*/
+
 #sidebar  {
     width: 250px;
     background: #1c1c1c;
@@ -219,6 +189,8 @@
     margin: 0;
     font-family: sans-serif;
 }
+
+/*Login and register page*/
 
 .login-h1 {
     color: #8911d9;
@@ -294,3 +266,4 @@
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+/* */
