@@ -9,17 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="chrs for users">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/footer.jsp" afterDir="false" />
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="footer and main-page">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/MasterDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Master.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-guide.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-guide.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-quiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-quiz.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +25,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -192,7 +186,7 @@
       <workItem from="1762726777821" duration="241000" />
       <workItem from="1762757675273" duration="5076000" />
       <workItem from="1762764342491" duration="4246000" />
-      <workItem from="1762775912699" duration="3008000" />
+      <workItem from="1762775912699" duration="5563000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -386,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762777718646</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="footer and main-page">
+      <option name="closed" value="true" />
+      <created>1762779026049</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1762779026049</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +430,8 @@
     <MESSAGE value="Character" />
     <MESSAGE value="createCharacter" />
     <MESSAGE value="chrs for users" />
-    <option name="LAST_COMMIT_MESSAGE" value="chrs for users" />
+    <MESSAGE value="footer and main-page" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer and main-page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
