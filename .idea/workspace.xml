@@ -9,14 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="update README.md">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/ProfileServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-profile.jsp" afterDir="false" />
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="login and reg style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-registration.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +181,7 @@
       <workItem from="1762726159125" duration="15000" />
       <workItem from="1762726739153" duration="25000" />
       <workItem from="1762726777821" duration="241000" />
-      <workItem from="1762757675273" duration="1737000" />
+      <workItem from="1762757675273" duration="2408000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -341,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762727006859</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="login and reg style">
+      <option name="closed" value="true" />
+      <created>1762759730037</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1762759730038</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +380,8 @@
     <MESSAGE value="new dataBase for users" />
     <MESSAGE value="yeah" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="login and reg style" />
+    <option name="LAST_COMMIT_MESSAGE" value="login and reg style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
