@@ -1,11 +1,10 @@
 package service;
 
-import dao.UserDao;
+import dao.UserDAO;
 import entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import util.HashUtil;
 
 import java.io.IOException;
@@ -14,7 +13,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class UserServiceImpl implements UserService {
-    private UserDao userDao;
+    private UserDAO userDao;
 
     public UserServiceImpl() {
         this.userDao = createUserDAO();
@@ -33,7 +32,7 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    public UserDao createUserDAO() {
+    public UserDAO createUserDAO() {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(
@@ -41,7 +40,7 @@ public class UserServiceImpl implements UserService {
                     "postgres",
                     "010909"
             );
-            return new UserDao(connection);
+            return new UserDAO(connection);
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }

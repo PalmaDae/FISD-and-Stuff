@@ -1,6 +1,6 @@
 package servlet;
 
-import dao.UserDao;
+import dao.UserDAO;
 import entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,14 +11,12 @@ import jakarta.servlet.http.HttpSession;
 import service.UserServiceImpl;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 
-    private UserDao userDao;
+    private UserDAO userDao;
     private UserServiceImpl userService;
 
     @Override

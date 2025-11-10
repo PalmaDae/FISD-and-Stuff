@@ -50,7 +50,7 @@
 src/
 └── main/
     ├── java/
-    │   ├── dao/           # Работа с БД (UserDao, TicketDAO)
+    │   ├── dao/           # Работа с БД (UserDAO, TicketDAO)
     │   ├── entity/        # Сущности (User, Ticket, Role)
     │   ├── filter/        # Фильтры для запросов (MyFilter)
     │   ├── service/       # Логика работы с сущностями (UserService, TicketService)

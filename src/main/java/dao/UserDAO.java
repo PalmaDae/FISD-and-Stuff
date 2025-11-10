@@ -1,7 +1,6 @@
 package dao;
 
 import entity.Role;
-import entity.Ticket;
 import entity.User;
 
 import java.sql.Connection;
@@ -9,10 +8,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserDao {
+public class UserDAO {
     private Connection connection;
 
-    public UserDao(Connection connection) {
+    public UserDAO(Connection connection) {
         this.connection = connection;
     }
 

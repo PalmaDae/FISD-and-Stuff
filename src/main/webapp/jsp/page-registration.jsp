@@ -14,7 +14,7 @@
         <h1 class="login-h1">Dungeons and Gags</h1>
         <h2>Форма регистрации</h2>
 
-        <form method="post" action="${pageContext.request.contextPath}/login">
+        <form method="post" action="${pageContext.request.contextPath}/registration">
             <label class="login-label" for="first">
                 Login:
             </label>
