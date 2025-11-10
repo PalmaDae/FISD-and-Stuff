@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="Чистка">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="random fact">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +184,8 @@
       <workItem from="1762726777821" duration="241000" />
       <workItem from="1762757675273" duration="5076000" />
       <workItem from="1762764342491" duration="4246000" />
-      <workItem from="1762775912699" duration="6878000" />
+      <workItem from="1762775912699" duration="7062000" />
+      <workItem from="1762788513139" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -403,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762783229694</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="random fact">
+      <option name="closed" value="true" />
+      <created>1762783926586</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1762783926586</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="two-thousand-yard stare" />
     <MESSAGE value="Что-то похожее на админ панель" />
     <MESSAGE value="максим помоги" />
     <MESSAGE value="Рабочий вариант с JettyLauncher" />
@@ -446,7 +453,8 @@
     <MESSAGE value="footer and main-page" />
     <MESSAGE value="main page campaign" />
     <MESSAGE value="Чистка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Чистка" />
+    <MESSAGE value="random fact" />
+    <option name="LAST_COMMIT_MESSAGE" value="random fact" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

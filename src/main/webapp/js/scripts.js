@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 );
 
+
+document.addEventListener("DOMContentLoaded", beatifulInfo);
+
 function randomFact() {
     let facts = [
         "Dungeons & Dragons была создана в 1974 году Гэри Гайгэксом и Дэйвом Арнесоном.",
@@ -87,3 +90,23 @@ window.addEventListener('load', () => {
         block.classList.add(savedTheme);
     }
 });
+
+function beatifulInfo() {
+    let menuButton = document.getElementById("menuButton");
+    let menuList = document.getElementById("menuList");
+
+    if (!menuButton || !menuList) return;
+
+    menuButton.addEventListener("click", (e) => {
+
+        e.preventDefault();
+        menuList.classList.toggle("show");
+
+    });
+
+    menuButton.addEventListener("click", (e) => {
+        if (!menuButton.contains(e.target) && !menuList.contains(e.target)) {
+            menuList.classList.remove("show");
+        }
+    });
+}
