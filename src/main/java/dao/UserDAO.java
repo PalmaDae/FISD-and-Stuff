@@ -22,7 +22,7 @@ public class UserDAO {
 
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
-                    Array sqlArray = rs.getArray("chacharacter_ids");
+                    Array sqlArray = rs.getArray("character_ids");
                     List<Long> chacharacterIds = new ArrayList<>();
 
                     if (sqlArray != null) {

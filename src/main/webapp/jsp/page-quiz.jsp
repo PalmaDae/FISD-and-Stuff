@@ -55,4 +55,6 @@
     <div id = "feedback"></div>
 
     </body>
+
+    <jsp:include page="/jsp/footer.jsp" />
 </html>
