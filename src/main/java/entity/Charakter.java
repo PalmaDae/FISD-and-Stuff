@@ -1,7 +1,9 @@
 package entity;
 
+import lombok.Builder;
 import lombok.Getter;
 
+@Builder
 @Getter
 public class Charakter {
     long id;
