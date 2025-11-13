@@ -2,6 +2,6 @@
 
 <footer>
 
-    <p align="center">&copy; 2025 Dungeons and Gags | Все права защищены</p>
+    <p>&copy; 2025 Dungeons and Gags | Все права защищены</p>
 
 </footer>

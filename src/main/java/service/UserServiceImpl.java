@@ -19,6 +19,10 @@ public class UserServiceImpl implements UserService {
         this.userDao = createUserDAO();
     }
 
+    public User getUserByLogin(String username) throws ServletException, IOException, SQLException {
+        return userDao.getUserByLogin(username);
+    }
+
     public static String checkUser(HttpServletRequest req) throws ServletException, IOException {
         Cookie[] cookies = req.getCookies();
         if (cookies != null) {

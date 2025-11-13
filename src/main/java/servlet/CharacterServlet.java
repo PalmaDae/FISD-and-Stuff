@@ -1,19 +1,27 @@
 package servlet;
 
+import dao.UserDAO;
 import entity.Charakter;
 import entity.Clasz;
 import entity.Race;
+import entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import service.UserService;
+import service.UserServiceImpl;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebServlet("/character")
 public class CharacterServlet extends HttpServlet {
+    private UserServiceImpl userService;
+    private UserDAO userDao;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/jsp/page-character.jsp").forward(req, resp);
@@ -139,5 +147,13 @@ public class CharacterServlet extends HttpServlet {
         session.setAttribute("charakter", charakter);
 
         resp.sendRedirect(req.getContextPath() + "/character");
+
+        String login = req.getParameter("login");
+
+        try {
+            User user = userService.getUserByLogin(login);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
