@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             correct: 1
         },
         {
-            question: "Кем является Тёмный Соблаз?н",
+            question: "Кем является Тёмный Соблазн?",
             options: ["Демон", "Рандомный шизик", "Отродье Баала", "Бастард Короля"],
             correct: 2
         },
@@ -424,9 +424,12 @@ function beatifulInfo() {
 
     });
 
-    menuButton.addEventListener("click", (e) => {
-        if (!menuButton.contains(e.target) && !menuList.contains(e.target)) {
-            menuList.classList.remove("show");
+
+    document.addEventListener("click", (e) =>
+        {
+            if (!menuButton.contains(e.target) && !menuList.contains(e.target)) {
+                menuList.classList.remove("show");
+            }
         }
-    });
+    )
 }
