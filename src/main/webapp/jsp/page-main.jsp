@@ -22,7 +22,7 @@
     </section>
 
     <section class="campaigns">
-        <h3>Популярные компании</h3>
+        <h3 class="campaign_title">Популярные компании</h3>
         <div class="cards">
             <div class="card">
                 <h4>
@@ -56,6 +56,5 @@
     </section>
 
         <jsp:include page="/jsp/footer.jsp" />
-
     </body>
 </html>

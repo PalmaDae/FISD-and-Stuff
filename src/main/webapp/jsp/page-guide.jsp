@@ -24,6 +24,16 @@
             <a onclick="showInfo('Эльф')">Эльф</a>
             <a onclick="showInfo('Орк')">Орк</a>
             <a onclick="showInfo('Человек')">Человек</a>
+            <a onclick="showInfo('Тифлинг')">Тифлинг</a>
+            <a onclick="showInfo('Кенку')">Кенку</a>
+            <a onclick="showInfo('Гитьянка')">Гитьянка</a>
+            <a onclick="showInfo('Гном')">Гном</a>
+            <a onclick="showInfo('Полу-Эльф')">Полу-Эльф</a>
+            <a onclick="showInfo('Дроу')">Дроу</a>
+            <a onclick="showInfo('Драконорождённый')">Драконорождённый</a>
+            <a onclick="showInfo('Грунг')">Грунг</a>
+            <a onclick="showInfo('Нага')">Нага</a>
+            <a onclick="showInfo('')"></a>
             <header>
                 Классы
             </header>
@@ -31,6 +41,14 @@
             <a onclick="showInfo('Бард')">Бард</a>
             <a onclick="showInfo('Воин')">Воин</a>
             <a onclick="showInfo('Колдун')">Колдун</a>
+            <a onclick="showInfo('Варвар')">Варвар</a>
+            <a onclick="showInfo('Волшебник')">Волшебник</a>
+            <a onclick="showInfo('Друид')">Друид</a>
+            <a onclick="showInfo('Жрец')">Жрец</a>
+            <a onclick="showInfo('Монах')">Монах</a>
+            <a onclick="showInfo('Паладин')">Паладин</a>
+            <a onclick="showInfo('Следопыт')">Следопыт</a>
+            <a onclick="showInfo('Чародей')">Чародей</a>
             <header>
                 Чудовища
             </header>

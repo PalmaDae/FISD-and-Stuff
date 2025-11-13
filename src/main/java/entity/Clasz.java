@@ -12,6 +12,5 @@ public enum Clasz {
     RANGER,
     ROGUE,
     PALADIN,
-    SORCERER,
-    ARTIFICER
+    SORCERER
 }

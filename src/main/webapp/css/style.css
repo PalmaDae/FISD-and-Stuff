@@ -183,7 +183,27 @@
     background-color: #800bcc;
 }
 
+.radiant .card {
+    background: linear-gradient(135deg, #eaeaea, #f4f4f4);
+    color: #222;
+}
 
+.dire .card {
+    background: linear-gradient(135deg, #222, #333);
+    color: #eee;
+}
+
+.dire .card:hover {
+    background: linear-gradient(135deg, #2a2a2a, #444);
+}
+
+.radiant .campaign_title {
+    color: #222;
+}
+
+.dire .campaign_title {
+    color: #fff;
+}
 /*Guide page*/
 
 #sidebar  {
@@ -312,7 +332,7 @@
 }
 
 .random_fact h3 {
-    color: #b08b4f;
+    color: #800bcc;
 }
 
 /*Gallery page*/
@@ -407,4 +427,52 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
+}
+
+/*Main page*/
+
+.campaigns {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.campaigns h3 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #eaeaea, #f4f4f4);
+    color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
