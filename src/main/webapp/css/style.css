@@ -204,6 +204,30 @@
 .dire .campaign_title {
     color: #fff;
 }
+
+.radiant .character_content {
+    background: #fff;
+    color: #222;
+}
+
+.radiant .short_info input {
+    background: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.dire .character_content {
+    background: #222;
+    color: #fff;
+}
+
+.dire .short_info input {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+
 /*Guide page*/
 
 #sidebar  {
@@ -475,4 +499,68 @@
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/*character page*/
+.character_content {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.short_info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.short_info label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.short_info input {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 300px;
+    transition: border 0.3s;
+}
+
+.short_info input:focus {
+    border-color: #8911d9;
+    outline: none;
+}
+
+
+.clasz, .race {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+
+.character_btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8911d9;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.character_btn:hover {
+    background-color: #800bcc;
+    transform: scale(1.05);
 }

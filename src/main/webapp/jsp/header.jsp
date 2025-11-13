@@ -12,6 +12,7 @@
                             <li><a href="${pageContext.request.contextPath}/arts">Галерея артов наших юзеров</a></li>
                             <li><a href="${pageContext.request.contextPath}/quiz">Насколько вы знаете BG3</a></li>
                             <li><a href="${pageContext.request.contextPath}/tickets">Аренда мастера</a></li>
+                            <li><a href="${pageContext.request.contextPath}/character">Создание персонажа</a></li>
                         </ul>
                     </li>
                     <li>
