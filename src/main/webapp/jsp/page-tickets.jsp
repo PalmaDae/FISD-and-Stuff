@@ -12,8 +12,7 @@
     <jsp:include page="/jsp/header.jsp" />
 
     <div class="info">
-        <h1 id="center_h1">Билеты на пивные фестивали</h1>
-        <h2>Выберите событие и добавьте билет в корзину</h2>
+        <h1 id="center_h1">Аренда мастера на партию</h1>
     </div>
 
     <table border="1" cellspacing="0" cellpadding="10">
@@ -53,11 +52,6 @@
         </c:forEach>
 
     </table>
-
-    <div class="sources">
-        <p>18+ Продажа алкоголя лицам младше 18 лет запрещена.</p>
-    </div>
-
     </body>
 
     <jsp:include page="/jsp/footer.jsp" />

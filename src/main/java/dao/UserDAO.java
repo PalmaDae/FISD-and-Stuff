@@ -75,4 +75,13 @@ public class UserDAO {
             ps.executeUpdate();
         }
     }
+
+    public void updateUserRole(String login, Role newRole)  throws SQLException {
+        String sql = "UPDATE users SET role = ? WHERE username = ?";
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setString(1, newRole.name());
+            ps.setString(2, login   );
+            ps.executeUpdate();
+        }
+    }
 }
