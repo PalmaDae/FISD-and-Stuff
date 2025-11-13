@@ -20,7 +20,7 @@
                     </li>
                     <li>
                         <form action="${pageContext.request.contextPath}/logout" method="get" style="display:inline">
-                            <button type="submit">Выйти</button>
+                            <button class="logout_btn" type="submit">Выйти</button>
                         </form>
                     </li>
                 </ul>

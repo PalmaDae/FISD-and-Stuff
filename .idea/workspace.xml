@@ -9,21 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="before login">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/CharService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CharakterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CharakterDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/GuideServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/GuideServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/QuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/QuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="before login" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -206,7 +192,7 @@
       <workItem from="1762960989862" duration="688000" />
       <workItem from="1762962013184" duration="141000" />
       <workItem from="1763018224583" duration="15436000" />
-      <workItem from="1763033867327" duration="6993000" />
+      <workItem from="1763033867327" duration="7374000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
