@@ -37,7 +37,6 @@ public class AdminServlet extends HttpServlet {
         String action = req.getParameter("action");
         String username = req.getParameter("username");
         String roleParam = req.getParameter("role");
-        String charIdParam = req.getParameter("charId");
 
         String errorMessage = null;
 
