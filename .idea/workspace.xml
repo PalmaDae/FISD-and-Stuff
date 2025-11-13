@@ -10,23 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="logout button">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/MasterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/TestServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/kamil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/leon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/max.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/mikhail.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/nikita.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/sonya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-character.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-character.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +202,7 @@
       <workItem from="1762960989862" duration="688000" />
       <workItem from="1762962013184" duration="141000" />
       <workItem from="1763018224583" duration="15436000" />
-      <workItem from="1763033867327" duration="16349000" />
+      <workItem from="1763033867327" duration="19393000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

@@ -1,30 +1,23 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<!DOCTYPE html>
-<html lang="ru">
+<html>
     <head>
-        <title>Админ - панель</title>
+        <meta charset="UTF-8">
+        <title>Админ - редактор пользователей</title>
         <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
-        <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
     </head>
     <body>
+    <h1>Редактор пользователей</h1>
 
-    <h1>Админ-панель</h1>
+    <form action="${pageContext.request.contextPath}/admin" method="post">
+        <label>Имя пользователя:</label>
+        <input type="text" name="username" placeholder="Введите имя пользователя" required><br><br>
 
-    <h2>UserEditor</h2>
-    <form action="/admin" method="post">
+        <label>Новая роль:</label>
+        <input type="text" name="role" placeholder="USER, ADMIN"><br><br>
 
+        <button type="submit" name="action" value="updateRole">Обновить роль</button>
+        <button type="submit" name="action" value="deleteUser">Удалить пользователя</button>
     </form>
-
-    <h2>MasterEditor</h2>
-    <form action="/admin" method="post">
-
-    </form>
-    <h2>CharEditor</h2>
-    <form action="/admin" method="post">
-
-    </form>
-
-
 
     </body>
 </html>

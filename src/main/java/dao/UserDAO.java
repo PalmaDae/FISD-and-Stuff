@@ -85,4 +85,14 @@ public class UserDAO {
         }
     }
 
+    public void deleteUser(String login) throws SQLException {
+        String sql = "DELETE FROM users WHERE username = ?";
+
+        try(PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setString(1, login);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

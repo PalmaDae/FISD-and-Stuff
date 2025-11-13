@@ -56,6 +56,7 @@ public class MyFilter extends HttpFilter {
 
         if (path.equals("/admin") && !(user.getRole() == Role.ADMIN)) {
             response.sendRedirect(request.getContextPath() + "/main");
+            return;
         }
 
         if (user.getRole() == Role.GUEST) {

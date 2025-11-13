@@ -1,6 +1,7 @@
 package service;
 
 import dao.UserDAO;
+import entity.Role;
 import entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
@@ -40,6 +41,14 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    public void deleteUser(String username) throws SQLException {
+        userDao.deleteUser(username);
+    }
+
+    public void updateUserRole(String username, String role) throws SQLException {
+        userDao.updateUserRole(username, Role.valueOf(role));
+    }
+
     public UserDAO createUserDAO() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -73,5 +82,9 @@ public class UserServiceImpl implements UserService {
     public boolean saveNewUser(String username, String password) throws SQLException {
         userDao.createUser(username, password);
         return true;
+    }
+
+    public void addCharToUser(String username, long charId) throws SQLException {
+        userDao.addCharToUser(username, charId);
     }
 }
