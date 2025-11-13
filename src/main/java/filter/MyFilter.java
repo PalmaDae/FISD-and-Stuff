@@ -49,7 +49,7 @@ public class MyFilter extends HttpFilter {
             session.setAttribute("user", user);
         }
 
-        if (path.equals("/main") || path.equals("/registration") || path.equals("/login")) {
+        if (path.equals("/main") || path.equals("/registration") || path.equals("/login") || path.equals("/test")) {
             chain.doFilter(req, res);
             return;
         }

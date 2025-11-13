@@ -2,6 +2,7 @@ package entity;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 @Getter
@@ -11,4 +12,7 @@ public class Master {
     String photoPath;
     String description;
     int cost;
+
 }
+
+
