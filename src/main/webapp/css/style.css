@@ -721,3 +721,23 @@
     outline: none;
     border-color: #8911d9;
 }
+.stat-group label#level-label {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    font-size: 14px;
+}
+
+.stat-group label#level-label input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    transition: border 0.3s, background 0.3s, color 0.3s;
+}
+
+.stat-group label#level-label input:focus {
+    border-color: #8911d9;
+    outline: none;
+}

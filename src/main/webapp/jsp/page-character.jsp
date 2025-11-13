@@ -10,7 +10,7 @@
 <jsp:include page="/jsp/header.jsp" />
 
     <div class="character_content">
-        <form method="post" action="/character">
+        <form method="post" action="${pageContext.request.contextPath}/character">
             <div class="short_info">
                 <label for="name">Имя персонажа</label>
                 <input type="text" id="name" name="name" required>
@@ -24,45 +24,44 @@
             <div class="clasz">
                 <label for="clasz">Класс</label>
                 <select id="clasz" name="clasz">
-                    <option>Воин</option>
-                    <option>Плут</option>
-                    <option>Жрец</option>
-                    <option>Колдун</option>
-                    <option>Волшебник</option>
-                    <option>Колдун</option>
-                    <option>Монах</option>
-                    <option>Бард</option>
-                    <option>Следопыт</option>
-                    <option>Варвар</option>
-                    <option>Друид</option>
-                    <option>Паладин</option>
-                    <option>Чародей</option>
+                    <option value="WARRIOR">Воин</option>
+                    <option value="ROGUE">Плут</option>
+                    <option value="CLERIC">Жрец</option>
+                    <option value="WARLOCK">Колдун</option>
+                    <option value="WIZARD">Волшебник</option>
+                    <option value="MONK">Монах</option>
+                    <option value="BARD">Бард</option>
+                    <option value="RANGER">Следопыт</option>
+                    <option value="BARBARIAN">Варвар</option>
+                    <option value="DRUID">Друид</option>
+                    <option value="PALADIN">Паладин</option>
+                    <option value="SORCERER">Чародей</option>
                 </select>
             </div>
 
             <div class="race">
                 <label for="race">Раса</label>
                 <select id="race" name="race">
-                    <option>Человек</option>
-                    <option>Дварф</option>
-                    <option>Гном</option>
-                    <option>Полу-Эльф</option>
-                    <option>Гит</option>
-                    <option>Гном</option>
-                    <option>Тифлинг</option>
-                    <option>Дроу</option>
-                    <option>Грунг</option>
-                    <option>Нага</option>
-                    <option>Дроу</option>
-                    <option>Кенку</option>
-                    <option>Драконорождённый</option>
-                    <option>Эльф</option>
+                    <option value="HUMAN">Человек</option>
+                    <option value="DWARF">Дварф</option>
+                    <option value="GNOM">Гном</option>
+                    <option value="HALF_ELF">Полу-Эльф</option>
+                    <option value="GITH">Гит</option>
+                    <option value="TIEFLING">Тифлинг</option>
+                    <option value="DROW">Дроу</option>
+                    <option value="GRUNG">Грунг</option>
+                    <option value="NAGA">Нага</option>
+                    <option value="KENKU">Кенку</option>
+                    <option value="DRAGONBORN">Драконорождённый</option>
+                    <option value="ELF">Эльф</option>
                 </select>
             </div>
+
 
             <div class="stats">
                 <h3>Характеристики</h3>
                 <div class="stat-group">
+                    <label id="level-label">Уровень<input type="number" id="level" name="level" min="1" value="1" required></label>
                     <label>Сила <input type="number" name="strength" min="1" max="20" value="10"></label>
                     <label>Ловкость <input type="number" name="dexterity" min="1" max="20" value="10"></label>
                     <label>Телосложение <input type="number" name="constitution" min="1" max="20" value="10"></label>
@@ -78,7 +77,7 @@
                 <label>Инициатива<input type="number" name="initiative" min="0" value="10"></label>
                 <label>Скорость<input type="number" name="speed" min="0" value="30"></label>
                 <label>Текущее здоровье<input type="number" name="hitPoints" min="0" value="10"></label>
-                <label>Временное здоровье<input type="number" name="!important;" min="0" value="0"></label>
+                <label>Временное здоровье<input type="number" name="temporaryHitPoints" min="0" value="0"></label>
                 <label>Кубик атаки<input type="number" name="hitDice" min="0" value="1"></label>
             </div>
 
@@ -90,9 +89,9 @@
                     <label>Медь <input type="number" name="copper" min="0" value="0"></label>
                 </div>
             </div>
-        </form>
 
-        <button type="submit" class="character_btn">Создать персонажа</button>
+            <button type="submit" class="character_btn">Создать персонажа</button>
+        </form>
 
     </div>
 

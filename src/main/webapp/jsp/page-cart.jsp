@@ -30,7 +30,7 @@
             <p>Спасибо, что выбираете пивные фестивали с нами!</p>
         </div>
 
-    </body>
+    </body>,
 
     <jsp:include page="/jsp/footer.jsp" />
 </html>
