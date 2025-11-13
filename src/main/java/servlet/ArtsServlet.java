@@ -15,9 +15,9 @@ public class ArtsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
 
-        String username = UserServiceImpl.checkUser(req);
+        String login = UserServiceImpl.checkUser(req);
 
-        req.setAttribute("username",username);
+        req.setAttribute("login",login);
 
         req.getRequestDispatcher("/jsp/page-arts.jsp").forward(req, resp);
     }

@@ -66,4 +66,13 @@ public class UserDAO {
             }
         }
     }
+
+    public void addCharToUser(String login, long charId) throws SQLException {
+        String sql = "UPDATE users SET character_ids = COALESCE(character_ids, '{}') || ? WHERE username = ?";
+        try(PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setLong(1, charId);
+            ps.setString(2, login);
+            ps.executeUpdate();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package servlet;
 
+import dao.CharakterDAO;
 import dao.UserDAO;
 import entity.Charakter;
 import entity.Clasz;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import service.CharService;
 import service.UserService;
 import service.UserServiceImpl;
 
@@ -21,6 +23,8 @@ import java.sql.SQLException;
 public class CharacterServlet extends HttpServlet {
     private UserServiceImpl userService;
     private UserDAO userDao;
+    private CharakterDAO charakterDao;
+    private CharService charService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,32 +32,13 @@ public class CharacterServlet extends HttpServlet {
     }
 
     @Override
+    public void init() throws ServletException {
+        this.userService = new UserServiceImpl();
+        this.charService = new CharService();
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        String name = req.getParameter("name");
-//        String playerName = req.getParameter("player_name");
-//        String raceParam = req.getParameter("race");
-//        String claszParam = req.getParameter("clasz");
-//
-//        int strength = Integer.parseInt(req.getParameter("strength"));
-//        int dexterity = Integer.parseInt(req.getParameter("dexterity"));
-//        int constitution = Integer.parseInt(req.getParameter("constitution"));
-//        int intelligence = Integer.parseInt(req.getParameter("intelligence"));
-//        int wisdom = Integer.parseInt(req.getParameter("wisdom"));
-//        int charisma = Integer.parseInt(req.getParameter("charisma"));
-//
-//        int armorClass = Integer.parseInt(req.getParameter("armorClass"));
-//        int initiative = Integer.parseInt(req.getParameter("initiative"));
-//        int speed = Integer.parseInt(req.getParameter("speed"));
-//        int hitPoints = Integer.parseInt(req.getParameter("hitPoints"));
-//        int temporaryHitPoints = Integer.parseInt(req.getParameter("temporaryHitPoints"));
-//        int hitDice = Integer.parseInt(req.getParameter("hitDice"));
-//
-//        int gold = Integer.parseInt(req.getParameter("gold"));
-//        int silver = Integer.parseInt(req.getParameter("silver"));
-//        int copper = Integer.parseInt(req.getParameter("copper"));
-//        int level = Integer.parseInt(req.getParameter("level"));
-
-
         String name = req.getParameter("name");
         System.out.println("name = " + name);
 
@@ -146,14 +131,20 @@ public class CharacterServlet extends HttpServlet {
 
         session.setAttribute("charakter", charakter);
 
-        resp.sendRedirect(req.getContextPath() + "/character");
+        User userForLogin = (User) session.getAttribute("user");
 
-        String login = req.getParameter("login");
+        String login = userForLogin.getUsername();
 
         try {
-            User user = userService.getUserByLogin(login);
+            charService.addCharToDB(charakter);
+
+            long charId = charService.getID(name, playerName);
+
+            userService.addCharToUs(login, charId);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
+        resp.sendRedirect(req.getContextPath() + "/character");
     }
 }

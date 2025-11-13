@@ -5,6 +5,7 @@ import entity.Role;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CharakterDAO {
@@ -44,7 +45,27 @@ public class CharakterDAO {
             ps.setInt(19, charakter.getSilver());
             ps.setInt(20, charakter.getCopper());
             ps.executeUpdate();
+
         }
+    }
+
+    public long getCharIdByNames(String name, String player) {
+        String sql = "SELECT id FROM characters WHERE name = ? AND player_name = ? LIMIT 1";
+
+        try(PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setString(1, name);
+            ps.setString(2, player);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getLong("id");
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return -1;
     }
 }
 

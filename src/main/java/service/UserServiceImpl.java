@@ -23,6 +23,10 @@ public class UserServiceImpl implements UserService {
         return userDao.getUserByLogin(username);
     }
 
+    public void addCharToUs(String userName, long charID) throws SQLException {
+        userDao.addCharToUser(userName, charID);
+    }
+
     public static String checkUser(HttpServletRequest req) throws ServletException, IOException {
         Cookie[] cookies = req.getCookies();
         if (cookies != null) {
