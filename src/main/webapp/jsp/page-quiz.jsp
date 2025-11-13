@@ -4,7 +4,7 @@
     <head>
         <title>Викторина</title>
         <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
-        <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
+        <script src="${pageContext.request.contextPath}/js/scripts.js" defer></script>
     </head>
 
 
@@ -15,27 +15,8 @@
     <div class="quiz_wrapper">
         <div class="quiz_container">
             <div class="quiz" id="quiz">
-                <div class="question" id="question">
-
-                </div>
-                <div class="options" id="options">
-                    <label>
-                        <input type="radio" name="option" value="0">
-                        1
-                    </label>
-                    <label>
-                        <input type="radio" name="option" value="0">
-                        2
-                    </label>
-                    <label>
-                        <input type="radio" name="option" value="0">
-                        3
-                    </label>
-                    <label>
-                        <input type="radio" name="option" value="0">
-                        4
-                    </label>
-                </div>
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
                 <button class="btn" id="nextBtn">Следующий вопрос</button>
             </div>
             <div class="result"></div>

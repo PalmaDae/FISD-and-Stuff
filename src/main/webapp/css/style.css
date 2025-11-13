@@ -166,21 +166,21 @@
 }
 
 .radiant .quiz_container .btn {
-    background-color: #4caf50;
+    background-color: #8911d9;
     color: #fff;
 }
 
 .radiant .quiz_container .btn:hover {
-    background-color: #45a049;
+    background-color: #800bcc;
 }
 
 .dire .quiz_container .btn {
-    background-color: #388e3c;
+    background-color: #8911d9;
     color: #fff;
 }
 
 .dire .quiz_container .btn:hover {
-    background-color: #2e7d32;
+    background-color: #800bcc;
 }
 
 
@@ -391,7 +391,7 @@
 .btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background: #4caf50;
+    background: #8911d9;
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -399,7 +399,7 @@
 }
 
 .btn:hover {
-    background: #45a049;
+    background: #800bcc;
 }
 
 .result {

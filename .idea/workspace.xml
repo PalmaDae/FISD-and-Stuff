@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="Крутая галлерея">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="some update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Charakter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Charakter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-quiz.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-quiz.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +25,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -196,6 +195,8 @@
       <workItem from="1762946911576" duration="109000" />
       <workItem from="1762956594036" duration="5000" />
       <workItem from="1762960989862" duration="688000" />
+      <workItem from="1762962013184" duration="141000" />
+      <workItem from="1763018224583" duration="2991000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -445,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762808207888</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="some update">
+      <option name="closed" value="true" />
+      <created>1762962146559</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1762962146559</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="регистрация" />
     <MESSAGE value="Логаут и логин" />
     <MESSAGE value="gags" />
     <MESSAGE value="before jsp" />
@@ -488,7 +496,8 @@
     <MESSAGE value="ПОЧИНИЛ JS" />
     <MESSAGE value="галлерея но надо поменять размер" />
     <MESSAGE value="Крутая галлерея" />
-    <option name="LAST_COMMIT_MESSAGE" value="Крутая галлерея" />
+    <MESSAGE value="some update" />
+    <option name="LAST_COMMIT_MESSAGE" value="some update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

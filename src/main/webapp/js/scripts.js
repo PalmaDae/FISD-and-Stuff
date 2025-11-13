@@ -5,6 +5,104 @@ document.addEventListener("DOMContentLoaded", function() {
 );
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const quizData = [
+        {
+            question: "Кто издатель игры года?",
+            options: ["Bethesda", "Larian", "OwlCats", "ITISGaming"],
+            correct: 1
+        },
+        {
+            question: "По какой причине вы умрёте в файте с Миркулом?",
+            options: ["Ваш тимейт кинет гранаты под себя на доблести", "Ваш тимейт начнёт бесконечную драку с гиенами на доблести", "Просто так", "Ваш тимейт застрянет в роще друидов (на доблести)"],
+            correct: 0
+        },
+        {
+            question: "Кто лучшая девочка BG3?",
+            options: ["Шадуха", "Минтара", "Карлах", "Этель"],
+            correct: 1
+        },
+        {
+            question: "Кем является Тёмный Соблаз?н",
+            options: ["Демон", "Рандомный шизик", "Отродье Баала", "Бастард Короля"],
+            correct: 2
+        },
+        {
+            question: "Cколько баллов Пальмун залутает за эту семестровку?",
+            options: ["0", "20", "5", "10"],
+            correct: 5
+        }
+    ];
+
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const nextBtn = document.getElementById("nextBtn");
+    const resultEl = document.querySelector(".result");
+
+    if (!questionEl || !optionsEl || !nextBtn || !resultEl) return;
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+        const current = quizData[currentQuestion];
+        questionEl.textContent = current.question;
+        optionsEl.innerHTML = "";
+
+        current.options.forEach((option, index) => {
+            const label = document.createElement("label");
+            label.innerHTML = `
+                <input type="radio" name="option" value="${index}">
+                ${option}
+            `;
+            optionsEl.appendChild(label);
+        });
+    }
+
+    function getSelectedOption() {
+        const options = document.querySelectorAll('input[name="option"]');
+        for (let opt of options) {
+            if (opt.checked) return parseInt(opt.value);
+        }
+        return null;
+    }
+
+    nextBtn.addEventListener("click", () => {
+        const answer = getSelectedOption();
+        if (answer === null) return;
+
+        if (answer === quizData[currentQuestion].correct) score++;
+        currentQuestion++;
+
+        if (currentQuestion < quizData.length) loadQuestion();
+        else showResult();
+    });
+
+    function getRank(score) {
+        // const percent = (score / total) * 100;
+        if (score >= 5) return "БорнТуДайчик";
+        if (score >= 3) return "Медвесыч";
+        if (score >= 2) return "Лягушка";
+        return "Ты кто вообще?";
+    }
+
+    function showResult() {
+        questionEl.textContent = "";
+        optionsEl.innerHTML = "";
+        nextBtn.style.display = "none";
+
+        const rank = getRank(score);
+
+        resultEl.innerHTML = `
+            Вы набрали ${score} из ${quizData.length} правильных ответов.<br>
+            Ваш Титул: <span style="color:#8911d9">${rank}</span>
+        `;
+    }
+
+    loadQuestion();
+});
+
 document.addEventListener("DOMContentLoaded", beatifulInfo);
 
 document.querySelectorAll('.gallery-item img').forEach(img => {
