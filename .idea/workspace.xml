@@ -11,10 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="todolist&#10;update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-main.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,7 @@
       <workItem from="1763133815784" duration="20000" />
       <workItem from="1763137588580" duration="2408000" />
       <workItem from="1763140028162" duration="1218000" />
-      <workItem from="1763141258397" duration="632000" />
+      <workItem from="1763141258397" duration="2232000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

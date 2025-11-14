@@ -105,13 +105,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", beatifulInfo);
 
-document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        overlay.innerHTML = `<img src="${img.src}" class="large-img">`;
-        overlay.addEventListener('click', () => overlay.remove());
-        document.body.appendChild(overlay);
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            const overlay = document.createElement('div');
+            overlay.classList.add('overlay');
+            overlay.innerHTML = `<img src="${img.src}" class="large-img">`;
+
+            overlay.addEventListener('click', () => overlay.remove());
+
+            document.addEventListener('keydown', function escHandler(e) {
+                if (e.key === "Escape") {
+                    overlay.remove();
+                    document.removeEventListener('keydown', escHandler);
+                }
+            });
+
+            document.body.appendChild(overlay);
+        });
     });
 });
 
