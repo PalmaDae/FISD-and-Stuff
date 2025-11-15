@@ -19,5 +19,10 @@
         <button type="submit" name="action" value="deleteUser">Удалить пользователя</button>
     </form>
 
+    <form action="${pageContext.request.contextPath}/admin" method="post">
+        <label></label>
+
+    </form>
+
     </body>
 </html>

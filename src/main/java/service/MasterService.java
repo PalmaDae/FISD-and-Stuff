@@ -19,7 +19,7 @@ public class MasterService {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/beerfest",
+                    "jdbc:postgresql://localhost:5432/characters",
                     "postgres",
                     "010909"
             );
