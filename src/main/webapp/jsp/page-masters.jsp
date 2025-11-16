@@ -22,7 +22,7 @@
         <th>Фото</th>
         <th>Описание</th>
         <th>Цена</th>
-        <th>Добавить</th>
+        <th>Арендовать</th>
     </tr>
 
 
@@ -43,10 +43,7 @@
                 ₽${master.cost}
             </td>
             <td>
-                <form action="${pageContext.request.contextPath}/masters" method="post">
-                    <input type="hidden" name="masterId" value="${master.id}">
-                    <button type="submit">В корзину</button>
-                </form>
+                <button type="button" onclick="showRentalMessage('${master.name}')">Арендовать</button>
             </td>
         </tr>
 

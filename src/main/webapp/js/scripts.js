@@ -103,6 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loadQuestion();
 });
 
+
+function showRentalMessage(masterName) {
+    alert(masterName + " свяжется с вами скоро!");
+}
+
 document.addEventListener("DOMContentLoaded", beatifulInfo);
 
 document.addEventListener("DOMContentLoaded", () => {

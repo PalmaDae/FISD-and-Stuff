@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="after many to many">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ArtsServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-arts.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +206,9 @@
       <workItem from="1763207118522" duration="20000" />
       <workItem from="1763208465767" duration="7865000" />
       <workItem from="1763285287332" duration="157000" />
-      <workItem from="1763295901255" duration="6727000" />
+      <workItem from="1763295901255" duration="6938000" />
+      <workItem from="1763304679914" duration="382000" />
+      <workItem from="1763308056639" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
