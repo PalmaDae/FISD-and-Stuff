@@ -9,6 +9,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class CharService {
+    private UserDAO userDAO;
     private CharakterDAO charDAO;
 
     public CharakterDAO createCharDAO() {
@@ -26,11 +27,22 @@ public class CharService {
     }
 
     public CharService() {
-        this.charDAO = createCharDAO();
+        try {
+            Class.forName("org.postgresql.Driver");
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:postgresql://localhost:5432/characters",
+                    "postgres",
+                    "010909"
+            );
+            this.charDAO = new CharakterDAO(connection);
+            this.userDAO = new UserDAO(connection);
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void addCharToDB(Charakter charakter) throws SQLException {
-        charDAO.createCharacter(charakter);
+    public long addCharToUser(Charakter charakter, String username) throws SQLException {
+        return charDAO.createCharacterAndAssignToUser(charakter, username, userDAO);
     }
 
     public long getID(String name, String username) {

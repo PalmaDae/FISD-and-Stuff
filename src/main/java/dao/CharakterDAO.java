@@ -16,15 +16,16 @@ public class CharakterDAO {
         this.connection = connection;
     }
 
-    public void createCharacter(Charakter charakter) throws SQLException {
-        String sql = "insert into characters (" +
+    public long createCharacterAndAssignToUser(Charakter charakter, String username, UserDAO userDAO) throws SQLException {
+        String sql = "INSERT INTO characters (" +
                 "name, player_name, race, clasz, level, " +
                 "strength, intelligence, wisdom, charisma, dexterity, constitution, " +
                 "speed, armor_class, initiative, hit_points, temporary_hit_points, hit_dice, " +
                 "gold, silver, copper" +
-                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING id";
 
-        try(PreparedStatement ps = connection.prepareStatement(sql)) {
+        long characterId;
+        try (PreparedStatement ps = connection.prepareStatement(sql)) {
             ps.setString(1, charakter.getName());
             ps.setString(2, charakter.getPlayerName());
             ps.setString(3, charakter.getRace().name());
@@ -45,10 +46,18 @@ public class CharakterDAO {
             ps.setInt(18, charakter.getGold());
             ps.setInt(19, charakter.getSilver());
             ps.setInt(20, charakter.getCopper());
-            ps.executeUpdate();
 
+            try (ResultSet rs = ps.executeQuery()) {
+                rs.next();
+                characterId = rs.getLong("id");
+            }
         }
+
+        userDAO.addCharacterToUser(username, characterId);
+
+        return characterId;
     }
+
 
     public long getCharIdByNames(String name, String player) {
         String sql = "SELECT id FROM characters WHERE name = ? AND player_name = ? LIMIT 1";
@@ -71,7 +80,7 @@ public class CharakterDAO {
 
     public List<Charakter> getAllCharacters() throws SQLException {
         List<Charakter> characters = new ArrayList<>();
-        String sql = "SELECT * FROM characters";
+        String sql = "select * from characters";
         try (Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
             while (rs.next()) {

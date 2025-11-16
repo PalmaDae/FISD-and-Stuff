@@ -136,11 +136,7 @@ public class CharacterServlet extends HttpServlet {
         String login = userForLogin.getUsername();
 
         try {
-            charService.addCharToDB(charakter);
-
-            long charId = charService.getID(name, playerName);
-
-            userService.addCharToUs(login, charId);
+            charService.addCharToUser(charakter,  login);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

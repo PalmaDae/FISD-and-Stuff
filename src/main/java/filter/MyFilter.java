@@ -45,7 +45,7 @@ public class MyFilter extends HttpFilter {
         User user = (User) session.getAttribute("user");
 
         if (user == null) {
-            user = new User(0, "guest", "", Role.GUEST, new ArrayList<>());
+            user = new User(0, "guest", "", Role.GUEST);
             session.setAttribute("user", user);
         }
 
