@@ -7,6 +7,7 @@ import entity.Master;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 public class MasterService {
     private  MasterDAO masterDAO;
@@ -33,5 +34,9 @@ public class MasterService {
         masterDAO.createMaster(master);
 
         System.out.println(master);
+    }
+
+    public List<Master> getAllMasters() throws SQLException {
+        return masterDAO.getAllMasters();
     }
 }

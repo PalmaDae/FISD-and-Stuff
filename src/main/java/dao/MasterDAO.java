@@ -1,11 +1,11 @@
 package dao;
 
 import entity.Master;
+import entity.Ticket;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MasterDAO {
     private Connection connection;
@@ -26,5 +26,27 @@ public class MasterDAO {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<Master> getAllMasters() throws SQLException {
+        List<Master> masters = new ArrayList<>();
+        String sql = "select * from masters order by id";
+
+        try (Statement statement = connection.createStatement();
+             ResultSet rs = statement.executeQuery(sql)
+        ) {
+            while (rs.next()) {
+                masters.add(Master.builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .photoPath(rs.getString("photo_path"))
+                        .description(rs.getString("description"))
+                        .cost(rs.getInt("cost"))
+                        .build()
+                );
+            }
+        }
+
+        return masters;
     }
 }

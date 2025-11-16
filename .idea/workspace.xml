@@ -9,15 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="before many to many">
+    <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="after many to many">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/palmadae.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CharakterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CharakterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/MasterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MasterDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Charakter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Charakter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/MyFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CharService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CharService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Master.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/MasterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MasterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MasterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MasterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +213,7 @@
       <workItem from="1763207118522" duration="20000" />
       <workItem from="1763208465767" duration="7865000" />
       <workItem from="1763285287332" duration="157000" />
-      <workItem from="1763295901255" duration="2036000" />
+      <workItem from="1763295901255" duration="5362000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -517,7 +519,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763295967762</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="after many to many">
+      <option name="closed" value="true" />
+      <created>1763298384752</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1763298384752</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +545,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="some gags" />
     <MESSAGE value="html and gags" />
     <MESSAGE value="Потом" />
     <MESSAGE value="new dataBase for users" />
@@ -560,7 +569,8 @@
     <MESSAGE value="admin panel для галочки" />
     <MESSAGE value="todolist&#10;update" />
     <MESSAGE value="before many to many" />
-    <option name="LAST_COMMIT_MESSAGE" value="before many to many" />
+    <MESSAGE value="after many to many" />
+    <option name="LAST_COMMIT_MESSAGE" value="after many to many" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

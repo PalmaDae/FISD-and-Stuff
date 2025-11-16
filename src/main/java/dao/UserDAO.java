@@ -39,7 +39,7 @@ public class UserDAO {
     public List<Charakter> getCharactersByUser(String username) throws SQLException {
         String sql = "select c.* from characters c " +
                 "join user_characters uc on c.id = uc.character_id " +
-                "join users u on u.id = uc.ser_id " +
+                "join users u on u.id = uc.user_id " +
                 "where u.username = ?";
 
         List<Charakter> characters = new ArrayList<>();

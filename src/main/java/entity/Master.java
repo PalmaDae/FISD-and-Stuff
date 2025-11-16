@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Builder
 @Getter
-public class    Master {
+public class Master {
     long id;
     String name;
     String photoPath;

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html lang="ru">
 
 <head>
@@ -7,14 +8,52 @@
     <script src="${pageContext.request.contextPath}/js/scripts.js"></script>
 </head>
 
-    <body class="radiant" id="change_theme">
+<body class="radiant" id="change_theme">
 
-        <jsp:include page="/jsp/header.jsp" />
+<jsp:include page="/jsp/header.jsp" />
 
-        <div class="info">
-            <h1 id="center_h1">Аренда мастера на партию</h1>
-        </div>
+<div class="info">
+    <h1 id="center_h1">Аренда мастера на партию</h1>
+</div>
 
-    </body>
-    <jsp:include page="/jsp/footer.jsp" />
+<table border="1" cellspacing="0" cellpadding="10">
+    <tr>
+        <th>Мастер</th>
+        <th>Фото</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Добавить</th>
+    </tr>
+
+
+    <c:forEach var="master" items="${list}">
+
+        <tr>
+            <td>
+                ${master.name}
+            </td>
+
+            <td>
+                <img class="master_img" src="${pageContext.request.contextPath}/images/masters/${master.photoPath}">
+            </td>
+            <td>
+                ${master.description}
+            </td>
+            <td>
+                ₽${master.cost}
+            </td>
+            <td>
+                <form action="${pageContext.request.contextPath}/masters" method="post">
+                    <input type="hidden" name="masterId" value="${master.id}">
+                    <button type="submit">В корзину</button>
+                </form>
+            </td>
+        </tr>
+
+    </c:forEach>
+
+</table>
+</body>
+
+<jsp:include page="/jsp/footer.jsp" />
 </html>

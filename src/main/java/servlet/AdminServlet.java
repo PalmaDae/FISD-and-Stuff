@@ -1,5 +1,6 @@
 package servlet;
 
+import entity.Master;
 import entity.Role;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -36,19 +37,30 @@ public class AdminServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         String action = req.getParameter("action");
         String username = req.getParameter("username");
-        String roleParam = req.getParameter("role");
+        String role = req.getParameter("role");
+        String masterName = req.getParameter("masterName");
+        String description = req.getParameter("description");
+        String cost = req.getParameter("cost");
+        String photoPath = req.getParameter("photo");
 
         String errorMessage = null;
+
+        if (action == null) {
+            errorMessage = "Не выбрано действие";
+            req.setAttribute("errorMessage", errorMessage);
+            req.getRequestDispatcher("/jsp/page-admin.jsp").forward(req, resp);
+            return;
+        }
 
         try {
             switch (action) {
                 case "updateRole":
-                    if (username != null && roleParam != null && !roleParam.isEmpty()) {
+                    if (username != null && role != null && !role.isEmpty()) {
                         try {
-                            Role newRole = Role.valueOf(roleParam.toUpperCase());
+                            Role newRole = Role.valueOf(role.toUpperCase());
                             userService.updateUserRole(username, String.valueOf(newRole));
                         } catch (IllegalArgumentException e) {
-                            errorMessage = "Неверная роль: " + roleParam;
+                            errorMessage = "Неверная роль: " + role;
                         }
                     } else {
                         errorMessage = "Имя пользователя или роль не могут быть пустыми";
@@ -59,6 +71,24 @@ public class AdminServlet extends HttpServlet {
                         userService.deleteUser(username);
                     } else {
                         errorMessage = "Имя пользователя не может быть пустым";
+                    }
+                    break;
+
+                case "addMaster":
+                    if (masterName != null && !masterName.isEmpty() &&
+                            description != null && !description.isEmpty() &&
+                            cost != null && !cost.isEmpty() &&
+                            photoPath != null && !photoPath.isEmpty()) {
+                        Master master = Master.builder()
+                                        .name(masterName)
+                                        .description(description)
+                                        .cost(Integer.parseInt(cost))
+                                        .photoPath(photoPath)
+                                                .build();
+
+                        masterService.addMaster(master);
+                    } else {
+                        errorMessage = "Поля должны быть заполнены";
                     }
                     break;
 
