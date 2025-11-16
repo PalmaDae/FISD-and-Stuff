@@ -10,16 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="after many to many">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/masters/palmadae.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDoList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ToDoList.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MasterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MasterDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/MasterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MasterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TicketDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CharService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CharService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/TicketServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/CharacterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MasterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MasterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegistrationServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/TicketServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-tickets.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +219,7 @@
       <workItem from="1763207118522" duration="20000" />
       <workItem from="1763208465767" duration="7865000" />
       <workItem from="1763285287332" duration="157000" />
-      <workItem from="1763295901255" duration="5362000" />
+      <workItem from="1763295901255" duration="6029000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />

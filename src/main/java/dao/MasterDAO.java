@@ -1,7 +1,6 @@
 package dao;
 
 import entity.Master;
-import entity.Ticket;
 
 import java.sql.*;
 import java.util.ArrayList;

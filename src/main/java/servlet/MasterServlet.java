@@ -1,15 +1,12 @@
 package servlet;
 
-import dao.MasterDAO;
 import entity.Master;
-import entity.Ticket;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import service.MasterService;
-import service.TicketServiceImpl;
 import service.UserServiceImpl;
 
 import java.io.IOException;

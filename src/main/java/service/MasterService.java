@@ -1,7 +1,6 @@
 package service;
 
 import dao.MasterDAO;
-import dao.TicketDAO;
 import entity.Master;
 
 import java.sql.Connection;
