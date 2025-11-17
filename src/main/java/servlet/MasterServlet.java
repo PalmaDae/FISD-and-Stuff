@@ -41,18 +41,6 @@ public class MasterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String masterParametr = req.getParameter("masterId");
 
-//        if (masterParametr != null) {
-//            int masterId = Integer.parseInt(masterParametr);
-//
-//            try {
-//
-//            } catch (SQLException e) {
-//                throw new ServletException(e);
-//            }
-//        }
-//
-//        resp.sendRedirect("/cart");
     }
 }

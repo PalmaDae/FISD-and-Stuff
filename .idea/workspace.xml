@@ -11,8 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8139475-2166-4bf5-87d5-07614725876a" name="Changes" comment="after many to many">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/page-masters.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +206,8 @@
       <workItem from="1763285287332" duration="157000" />
       <workItem from="1763295901255" duration="6938000" />
       <workItem from="1763304679914" duration="382000" />
-      <workItem from="1763308056639" duration="303000" />
+      <workItem from="1763308056639" duration="2340000" />
+      <workItem from="1763317526787" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
